@@ -1,13 +1,13 @@
 # **Takım İsmi**
 
-Takım X
+
 
 # Ürün İle İlgili Bilgiler
 
 ## Takım Elemanları
 
-- Esra Sude Aydemir: Scrum Master
-- Melek Dursun: Product Owner
+- Esra Sude Aydemir: Product Owner
+- Melek Dursun: Scrum Master
 - Alphan Sarıdoğan: Developer
 - Mehmet Demir: Developer
 - Yaşar Alaca: Developer
