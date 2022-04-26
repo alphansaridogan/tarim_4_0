@@ -36,6 +36,7 @@
 - Hobi bahçesi sahipleri
 - Tarım işletmeleri
 - Kendi üretimini yapan Gıda Şirketleri
+- Toplam 28,6 milyon dekar salma sulama ile sulanan tarım toprak sahipleri
 
 
 ## Product Backlog URL
