@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tarim_4_0/config/app_router.dart';
 import 'package:tarim_4_0/screens/screens.dart';
 
 void main() {
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: const Color(0xFF0BAC1B),
       ),
-      home: MainView(),
+      onGenerateRoute: AppRouter.onGenerateRoute,
+      initialRoute: MainView.routeName,
     );
   }
 }

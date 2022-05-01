@@ -1,1 +1,10 @@
 export 'main_view/main_view.dart';
+export 'home_screen/home_screen.dart';
+export 'buy_iot_screen/buy_iot_screen.dart';
+export 'suggestions_screen/suggestions_screen.dart';
+export 'iot_screen/iot_screen.dart';
+export 'log_in_screen/log_in_screen.dart';
+export 'new_crop_screen/new_crop_screen.dart';
+export 'shop_screen/shop_screen.dart';
+export 'sing_up_screen/sing_up_screen.dart';
+export 'welcome_screen/welcome_screen.dart';

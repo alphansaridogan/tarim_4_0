@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 
-class ShopScreen extends StatelessWidget {
-  static const String routeName = '/shop';
+class SuggestionsScreen extends StatelessWidget {
+  static const String routeName = '/suggestions';
 
   static Route route() {
     return MaterialPageRoute(
-      builder: (_) => const ShopScreen(),
+      builder: (_) => const SuggestionsScreen(),
       settings: const RouteSettings(name: routeName),
     );
   }
-  const ShopScreen({Key? key}) : super(key: key);
+  const SuggestionsScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFF0BAC1B),
-        title: const Text('Mağaza'),
+        title: const Text('Öneriler'),
       ),
     );
   }

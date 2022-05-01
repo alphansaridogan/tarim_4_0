@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:bottom_bar/bottom_bar.dart';
-import 'package:tarim_4_0/screens/%20suggestions_screen/suggestions_screen.dart';
+import 'package:tarim_4_0/screens/suggestions_screen/suggestions_screen.dart';
 import 'package:tarim_4_0/screens/home_screen/home_screen.dart';
 import 'package:tarim_4_0/screens/iot_screen/iot_screen.dart';
 import 'package:tarim_4_0/screens/shop_screen/shop_screen.dart';
 
 
 class MainView extends StatefulWidget {
+  static const String routeName = '/';
+
+  static Route route() {
+    return MaterialPageRoute(
+      builder: (_) => MainView(),
+      settings: const RouteSettings(name: routeName),
+    );
+  }
   @override
   _MainView createState() => _MainView();
 }

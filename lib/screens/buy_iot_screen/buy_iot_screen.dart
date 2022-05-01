@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
-class WelcomeScreen extends StatelessWidget {
-  static const String routeName = '/welcome';
+class BuyIotScreen extends StatelessWidget {
+  static const String routeName = '/buy_iot';
 
   static Route route() {
     return MaterialPageRoute(
-      builder: (_) => const WelcomeScreen(),
+      builder: (_) => const BuyIotScreen(),
       settings: const RouteSettings(name: routeName),
     );
   }
-  const WelcomeScreen({Key? key}) : super(key: key);
+  const BuyIotScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Hoş Geldin'),
+      appBar: AppBar(title: const Text('Tarım 4.0 Satın Al'),
       ),
     );
   }
