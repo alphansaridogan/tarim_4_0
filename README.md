@@ -6,8 +6,8 @@
 
 ## Takım Elemanları
 
-- Esra Sude Aydemir: Product Owner
-- Melek Dursun: Scrum Master
+- Esra Sude Aydemir: Scrum Master
+- Melek Dursun: Product Owner
 - Alphan Sarıdoğan: Developer
 - Mehmet Demir: Developer
 - Yaşar Alaca: Developer
