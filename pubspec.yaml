@@ -43,6 +43,9 @@ dependencies:
   #mvvm + statemanangment
   stacked: ^2.3.6
 
+  #google fonts
+  google_fonts: ^2.3.2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

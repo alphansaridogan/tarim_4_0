@@ -14,14 +14,30 @@ class IotScreen extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Tarım 4.0'),
         ),
-        body: Center(
-          child: ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/buy_iot');
-              },
+        body: Column(
+          children: [
+            Center(
+              child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/buy_iot');
+                  },
 
-              ///örnek geçiş olsun diye koydum
-              child: const Text('Satın Al')),
+                  ///örnek geçiş olsun diye koydum
+                  child: const Text('Satın Al')),
+            ),
+            const SizedBox(
+              height: 50,
+            ),
+            Center(
+              child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/welcome');
+                  },
+
+                  ///örnek geçiş olsun diye koydum
+                  child: const Text('welcome')),
+            ),
+          ],
         ),
       ),
     );
