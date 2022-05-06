@@ -1,22 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:stacked/stacked.dart';
+import 'package:tarim_4_0/screens/shop_screen/shop_screen_model.dart';
 
 class ShopScreen extends StatelessWidget {
-  static const String routeName = '/shop';
-
-  static Route route() {
-    return MaterialPageRoute(
-      builder: (_) => const ShopScreen(),
-      settings: const RouteSettings(name: routeName),
-    );
-  }
   const ShopScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xFF0BAC1B),
-        title: const Text('Mağaza'),
+    return ViewModelBuilder<ShopScreenModel>.reactive(
+      viewModelBuilder: () => ShopScreenModel(),
+      onModelReady: (model) => model.init(),
+      builder: (context, model, child) => Scaffold(
+        appBar: AppBar(
+          title: const Text('Mağaza'),
+        ),
       ),
     );
   }

@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:stacked/stacked.dart';
+import 'package:tarim_4_0/screens/welcome_screen/welcome_screen_model.dart';
 
 class WelcomeScreen extends StatelessWidget {
-  static const String routeName = '/welcome';
-
-  static Route route() {
-    return MaterialPageRoute(
-      builder: (_) => const WelcomeScreen(),
-      settings: const RouteSettings(name: routeName),
-    );
-  }
   const WelcomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Hoş Geldin'),
+    return ViewModelBuilder<WelcomeScreenModel>.reactive(
+      viewModelBuilder: () => WelcomeScreenModel(),
+      onModelReady: (model) => model.init(),
+      builder: (context, model, child) => Scaffold(
+        appBar: AppBar(
+          title: const Text('Hoş Geldin'),
+        ),
       ),
     );
   }

@@ -1,22 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:stacked/stacked.dart';
+import 'package:tarim_4_0/screens/suggestions_screen/suggestions_screen_model.dart';
 
 class SuggestionsScreen extends StatelessWidget {
-  static const String routeName = '/suggestions';
-
-  static Route route() {
-    return MaterialPageRoute(
-      builder: (_) => const SuggestionsScreen(),
-      settings: const RouteSettings(name: routeName),
-    );
-  }
   const SuggestionsScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xFF0BAC1B),
-        title: const Text('Öneriler'),
+    return ViewModelBuilder<SuggestionsScreenModel>.reactive(
+      viewModelBuilder: () => SuggestionsScreenModel(),
+      onModelReady: (model) => model.init(),
+      builder: (context, model, child) => Scaffold(
+        appBar: AppBar(
+          title: const Text('Öneriler'),
+        ),
       ),
     );
   }

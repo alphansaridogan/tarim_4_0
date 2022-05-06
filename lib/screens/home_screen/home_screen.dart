@@ -1,25 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:stacked/stacked.dart';
+import 'package:tarim_4_0/screens/home_screen/home_screen_model.dart';
 
 class HomeScreen extends StatelessWidget {
-  /// buradan
-  static const String routeName = '/home';
-
-  static Route route() {
-    return MaterialPageRoute(
-        builder: (_) => const HomeScreen(),
-        settings: const RouteSettings(name: routeName),
-    );
-  }
-/// buraya kadar her ekleyeceğiniz sayfaya route kurmak için benzerini ekleyeceksiniz
-
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xFF0BAC1B),
-        title: const Text('Ana Sayfa'),
+    return ViewModelBuilder<HomeScreenModel>.reactive(
+      onModelReady: (model) => model.init(),
+      viewModelBuilder: () => HomeScreenModel(),
+      builder: (context, model, child) => Scaffold(
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          title: const Text('Ana Sayfa'),
+        ),
       ),
     );
   }
