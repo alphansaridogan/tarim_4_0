@@ -11,4 +11,6 @@ class SingUpScreenModel extends MainViewModel {
       settings: const RouteSettings(name: routeName),
     );
   }
+
+  TextEditingController controllerName = TextEditingController();
 }

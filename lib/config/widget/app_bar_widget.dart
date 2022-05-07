@@ -7,12 +7,14 @@ class AppBarWidget extends StatelessWidget {
   String title;
   String? subTitle;
   Size size;
+  TextStyle? textStyle;
   AppBarWidget({
     Key? key,
     this.color,
     required this.title,
     this.subTitle,
     required this.size,
+    this.textStyle = Constants.headline3,
   }) : super(key: key);
 
   @override
@@ -38,7 +40,7 @@ class AppBarWidget extends StatelessWidget {
             subTitle != null
                 ? Text(
                     subTitle!,
-                    style: Constants.headline2,
+                    style: textStyle,
                   )
                 : const Text(""),
           ],
