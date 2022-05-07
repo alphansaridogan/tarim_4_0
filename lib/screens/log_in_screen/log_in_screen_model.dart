@@ -11,4 +11,8 @@ class LogInScreenModel extends MainViewModel {
       settings: const RouteSettings(name: routeName),
     );
   }
+  TextEditingController controllerMail= TextEditingController();
+  TextEditingController controllerPassword= TextEditingController();
+
+
 }

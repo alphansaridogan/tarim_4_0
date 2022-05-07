@@ -39,7 +39,7 @@ class SingUpScreen extends StatelessWidget {
                       size: size,
                       child: SingleChildScrollView(
                         physics: const BouncingScrollPhysics(),
-                        child: Container(
+                        child: SizedBox(
                           height: constraints.maxHeight * 0.72,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -80,13 +80,16 @@ class SingUpScreen extends StatelessWidget {
                                 children: [
                                   const Text("Zaten hesabın var mı?"),
                                   TextButton(
-                                      onPressed: () {},
-                                      child: Text(
-                                        'Giriş Yap',
-                                        style: Constants.headline2.apply(
-                                            color:
-                                                Constants.green.withAlpha(125)),
-                                      ))
+                                    onPressed: () {
+                                      Navigator.pushNamed(context, '/login');
+                                    },
+                                    child: Text(
+                                      'Giriş Yap',
+                                      style: Constants.headline2.apply(
+                                          color:
+                                              Constants.green.withAlpha(125)),
+                                    ),
+                                  ),
                                 ],
                               )
                             ],
