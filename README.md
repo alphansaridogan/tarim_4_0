@@ -49,6 +49,15 @@ https://miro.com/app/board/uXjVO2g1ASM=/?share_link_id=398987921408
 -Sprint Notları: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir. 
 
 -Sprint içinde tamamlanması tahmin edilen puan: 110 Puan
+
+-Backlog düzeni ve Story seçimleri: Product Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint 1 için tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Storyler zorluk ve öncelik durumlarına göre puanlandırılmıştır.
+
+Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
+
+Daily Scrum: Daily Scrum toplantılarının zamansal sebeplerden ve yoğunluktan dolayı Whatsapp üzerinden yapılmasına karar verilmiştir. Buna ek olarak Google Meets üzerinden 3 günde bir olacak şekilde görüntülü toplantı yapılmıştır. Daily Scrum toplantısı meeting buluşmaları ve konuşmaları jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: [Daily Scrum Whatsapp Chat.txt](https://github.com/alphansaridogan/tarim_4_0/files/8647023/Daily.Scrum.Whatsapp.Chat.txt) ![Meeting](https://user-images.githubusercontent.com/76884034/167298133-de9e602c-ff04-490e-82a5-9e396af0bbbd.png)
+
+
+
 ---
 
 # Sprint 2
