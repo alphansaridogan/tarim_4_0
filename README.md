@@ -64,8 +64,8 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
 - **Ürün Durumu:** Ekran görüntüleri
 ![WhatsApp Image 2022-05-08 at 11 05 00](https://user-images.githubusercontent.com/76884034/167298820-9e0210e7-69a1-4a90-97cb-a11daa5036e9.jpeg)
 ![WhatsApp Image 2022-05-08 at 11 05 00 (1)](https://user-images.githubusercontent.com/76884034/167298831-2379ec75-f43a-4064-a2cf-1f9a38970056.jpeg)
-![WhatsApp Image 2022-05-08 at 11 05 00 (2)](https://user-images.githubusercontent.com/76884034/167298834-cd83e0c9-821e-47df-b66a-f![WhatsApp Image 2022-05-08 at 11 05 01 (1)](https://user-images.githubusercontent.com/76884034/167298836-459200d3-7eca-450f-92c9-0faf9bb07a57.jpeg)
-deb0d3db7db.jpeg)
+![WhatsApp Image 2022-05-08 at 11 05 00 (2)](https://user-images.githubusercontent.com/76884034/167298834-cd83e0c9-821e-47df-b66a-fdeb0d3db7db.jpeg)
+![WhatsApp Image 2022-05-08 at 11 05 01 (1)](https://user-images.githubusercontent.com/76884034/167298836-459200d3-7eca-450f-92c9-0faf9bb07a57.jpeg)
 ![WhatsApp Image 2022-05-08 at 11 05 01](https://user-images.githubusercontent.com/76884034/167298839-e669f3cf-f000-4d8a-862f-67a3e92ac6b1.jpeg)
 
 - **Sprint Review:** Alınan kararlar: 
