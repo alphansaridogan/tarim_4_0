@@ -10,4 +10,13 @@ class NewCropScreenModel extends MainViewModel {
       settings: const RouteSettings(name: routeName),
     );
   }
+
+  List<String> cities = ["Ankara", "İstanbul"];
+  List<String> counties = ["Fatih", "Esenler"];
+  List<String> products = ["Üzüm", "Elma"];
+  TextEditingController controllerCrop = TextEditingController();
+  String? city;
+  String? conty;
+  String? product;
+  double cultivationArea = 6.0;
 }

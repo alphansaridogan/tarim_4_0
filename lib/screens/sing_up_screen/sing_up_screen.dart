@@ -64,7 +64,9 @@ class SingUpScreen extends StatelessWidget {
                                 height: 20,
                               ),
                               TextFieldWidget(
-                                  title: 'Şifre Tekrar', size: size),
+                                title: 'Şifre Tekrar',
+                                size: size,
+                              ),
                               const SizedBox(
                                 height: 20,
                               ),

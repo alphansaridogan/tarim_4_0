@@ -19,7 +19,7 @@ class IotScreen extends StatelessWidget {
             Center(
               child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/buy_iot');
+                    Navigator.pushNamed(context, '/new_crop');
                   },
 
                   ///örnek geçiş olsun diye koydum

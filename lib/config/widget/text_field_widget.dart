@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:tarim_4_0/constants/constants.dart';
 
 class TextFieldWidget extends StatelessWidget {
-  double? height;
+  final Size size;
+  double height;
   TextEditingController? controller;
-  Color? cursorColor;
-  Color? color;
-  double? radius;
+  Color cursorColor;
+  Color color;
+  double radius;
   String title;
+  TextStyle textStyle;
 
   TextFieldWidget({
     Key? key,
@@ -18,27 +20,28 @@ class TextFieldWidget extends StatelessWidget {
     this.color = Constants.black,
     this.radius = 15,
     required this.title,
+    this.textStyle = Constants.subtitle1,
     required this.size,
   }) : super(key: key);
-
-  final Size size;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: size.height * height!,
+      height: size.height * height,
       child: TextField(
         controller: controller,
         cursorColor: cursorColor,
         decoration: InputDecoration(
           border: OutlineInputBorder(
             borderSide: BorderSide(
-              color: color!,
+              color: color,
             ),
-            borderRadius: BorderRadius.circular(radius!),
+            borderRadius: BorderRadius.circular(radius),
           ),
-          label:  Text(title),
-          labelStyle: const TextStyle(fontSize: 15),
+          label: Text(
+            title,
+            style: textStyle,
+          ),
         ),
       ),
     );

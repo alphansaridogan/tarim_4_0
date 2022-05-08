@@ -32,9 +32,9 @@ class Constants {
 
   //Altyazılar için kullanılan textstyle'lar
   static const TextStyle subtitle1 =
-      TextStyle(inherit: false, fontSize: 15, color: Colors.black);
-  static TextStyle subtitle2 =
-      const TextStyle(inherit: false, fontSize: 12, color: Colors.white);
+      TextStyle(inherit: false, fontSize: 15, color: Colors.black54);
+  static const TextStyle subtitle2 =
+       TextStyle(inherit: false, fontSize: 15, color: Colors.black);
   static TextStyle subtitle3 =
       const TextStyle(inherit: false, fontSize: 10, color: Colors.white);
 }

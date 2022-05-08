@@ -20,7 +20,7 @@ class ButtonWidget extends StatelessWidget {
     this.height = 0.03,
     this.radius = 15,
     this.color = Constants.white,
-    this.textStyle = Constants.subtitle1,
+    this.textStyle = Constants.subtitle2,
     this.borderColor = Colors.black38,
   }) : super(key: key);
 

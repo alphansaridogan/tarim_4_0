@@ -39,7 +39,7 @@ class WelcomeScreen extends StatelessWidget {
                     ),
                     const Text(
                       "Devam etmek için giriş yapmanız gerekmektedir!",
-                      style: Constants.subtitle1,
+                      style: Constants.subtitle2,
                     ),
                     SizedBox(
                       height: size.height * 0.2,
