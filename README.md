@@ -46,7 +46,7 @@ https://miro.com/app/board/uXjVO2g1ASM=/?share_link_id=398987921408
 ---
 
 # Sprint 1
-- Sprint Notları: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir. 
+- *Sprint Notları*: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir. 
 
 - Sprint içinde tamamlanması tahmin edilen puan: 110 Puan
 - Puan tamamlama mantığı: İlk sprintte yapmayı hedeflediğimiz backlogların toplamına göre elde ettiğimiz puanlar 110 olduğu için bu sprintte 110 puanı tamamlamamız kararlaştırılmıştır.
