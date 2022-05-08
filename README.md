@@ -41,14 +41,14 @@
 
 ## Product Backlog URL
 
-[Backlog Board]
+https://miro.com/app/board/uXjVO2g1ASM=/?share_link_id=398987921408
 
 ---
 
 # Sprint 1
 -Sprint Notları: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir. 
 
-- Sprint içinde tamamlanması tahmin edilen puan: 110 Puan
+-Sprint içinde tamamlanması tahmin edilen puan: 110 Puan
 ---
 
 # Sprint 2
