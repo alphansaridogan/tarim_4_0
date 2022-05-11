@@ -5,6 +5,7 @@ import 'package:tarim_4_0/constants/constants.dart';
 class TextFieldWidget extends StatelessWidget {
   final Size size;
   double height;
+  double width;
   TextEditingController? controller;
   Color cursorColor;
   Color color;
@@ -15,6 +16,7 @@ class TextFieldWidget extends StatelessWidget {
   TextFieldWidget({
     Key? key,
     this.height = 0.06,
+    this.width = 1,
     this.controller,
     this.cursorColor = Constants.black,
     this.color = Constants.black,
@@ -28,6 +30,7 @@ class TextFieldWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: size.height * height,
+      width: size.width * width,
       child: TextField(
         controller: controller,
         cursorColor: cursorColor,
