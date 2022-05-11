@@ -36,9 +36,12 @@ class SuggestionsScreen extends StatelessWidget {
                     children: [
                       SizedBox(
                         width: size.width * 0.45,
-                        child: Image.network(
-                          'https://www.cagri.com/Uploads/UrunResimleri/uzum-siyah-kg-cf9d.jpg',
-                        ),
+                        child: model.product != null
+                            ? Image.network(
+                                model.productDetail[model.bulma(model.product)]
+                                    ['urlImage'],
+                              )
+                            : const SizedBox(),
                       ),
                       DropDownWidget(
                           borderColor: Constants.white,
@@ -54,16 +57,96 @@ class SuggestionsScreen extends StatelessWidget {
                           size: size)
                     ],
                   ),
-                  Text(model.productDetail[0]
-                      [model.product]), //listedekine göre alanacak değer
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  model.product != null
+                      ? Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                          child: Center(
+                            child: (Text(
+                              '- ${model.productDetail[model.bulma(model.product)]['description1']}',
+                              style: Constants.subtitle1,
+                            )),
+                          ),
+                        )
+                      : const Text(''), //listedekine göre alanacak değer
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  model.product != null
+                      ? Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                          child: (Text(
+                            '- ${model.productDetail[model.bulma(model.product)]['description2']}',
+                            style: Constants.subtitle1,
+                          )),
+                        )
+                      : const SizedBox(),
                 ],
               ),
             ),
+            const SizedBox(
+              height: 25,
+            ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Column(
-                  children: [],
-                )
+                  children: [
+                    Image.asset(
+                      'assets/icon.png',
+                      scale: 0.9,
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    const Text(
+                      'Vitis vinifera',
+                      style: Constants.headline2,
+                    ),
+                  ],
+                ),
+                Column(
+                  children: [
+                    const Icon(
+                      Icons.thermostat_outlined,
+                      size: 45,
+                      color: Constants.white,
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    const Text(
+                      'Uygun Sıcaklık',
+                      style: Constants.headline2,
+                    ),
+                    Text(
+                      '18-24C',
+                      style: Constants.headline2.apply(color: Constants.black),
+                    )
+                  ],
+                ),
+                Column(
+                  children: [
+                    const Icon(
+                      Icons.water_drop_outlined,
+                      size: 45,
+                      color: Constants.white,
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    const Text(
+                      'Uygun Nem',
+                      style: Constants.headline2,
+                    ),
+                    Text(
+                      '18-24C',
+                      style: Constants.headline2.apply(color: Constants.black),
+                    )
+                  ],
+                ),
               ],
             )
           ],
