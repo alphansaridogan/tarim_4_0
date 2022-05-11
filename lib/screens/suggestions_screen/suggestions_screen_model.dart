@@ -22,7 +22,10 @@ class SuggestionsScreenModel extends MainViewModel {
       'description1':
           'Hava sıcaklıklarına bağlı olarak bu haftatoprak nemini %35 civarında tutulması önerilir.',
       'description2':
-          'Elmaaa: Küllenme hastalığı riskini önlemek için 15günde bir sıvı kükürt ile ilaçlama yapılmalıdır. İstenmeyen sürgünler budanmalı ana omcanın hava alması sağlanmalıdır.'
+          'Elmaaa: Küllenme hastalığı riskini önlemek için 15günde bir sıvı kükürt ile ilaçlama yapılmalıdır. İstenmeyen sürgünler budanmalı ana omcanın hava alması sağlanmalıdır.',
+      'moisture': '%12-40',
+      'heat': '18-24C',
+      'microorganism': 'Vitis vinifera',
     },
     {
       'ID': 1,
@@ -32,12 +35,14 @@ class SuggestionsScreenModel extends MainViewModel {
       'description1':
           'Elma: Hava sıcaklıklarına bağlı olarak bu haftatoprak nemini %35 civarında tutulması önerilir.Küllenme hastalığı riskini önlemek için 15günde bir sıvı kükürt ile ilaçlama yapılmalıdır. İstenmeyen sürgünler budanmalı ana omcanın hava alması sağlanmalıdır.',
       'description2':
-          'Elmaaa: Hava sıcaklıklarına bağlı olarak bu haftatoprak nemini %45 civarında tutulması önerilir.Küllenme hastalığı riskini önlemek için 15günde bir sıvı kükürt ile ilaçlama yapılmalıdır. İstenmeyen sürgünler budanmalı ana omcanın hava alması sağlanmalıdır.'
-    
+          'Elmaaa: Hava sıcaklıklarına bağlı olarak bu haftatoprak nemini %45 civarında tutulması önerilir.Küllenme hastalığı riskini önlemek için 15günde bir sıvı kükürt ile ilaçlama yapılmalıdır. İstenmeyen sürgünler budanmalı ana omcanın hava alması sağlanmalıdır.',
+      'moisture': '%25-50',
+      'heat': '8-30C',
+      'microorganism': 'Elma kurdu :)',
     }
   ];
 
-  bulma(String? product) {
+  productAssignment(String? product) {
     for (var i = 0; i < productDetail.length; i++) {
       if (product != null && product == productDetail[i]['Adi']) {
         return i;

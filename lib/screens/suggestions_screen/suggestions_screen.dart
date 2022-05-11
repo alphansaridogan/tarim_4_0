@@ -19,7 +19,6 @@ class SuggestionsScreen extends StatelessWidget {
           children: [
             Container(
               height: size.height * 0.7,
-              width: size.width * 0.96,
               decoration: const BoxDecoration(
                 color: Constants.white,
                 borderRadius: BorderRadius.only(
@@ -38,7 +37,8 @@ class SuggestionsScreen extends StatelessWidget {
                         width: size.width * 0.45,
                         child: model.product != null
                             ? Image.network(
-                                model.productDetail[model.bulma(model.product)]
+                                model.productDetail[
+                                        model.productAssignment(model.product)]
                                     ['urlImage'],
                               )
                             : const SizedBox(),
@@ -65,7 +65,7 @@ class SuggestionsScreen extends StatelessWidget {
                           padding: const EdgeInsets.symmetric(horizontal: 10.0),
                           child: Center(
                             child: (Text(
-                              '- ${model.productDetail[model.bulma(model.product)]['description1']}',
+                              '- ${model.productDetail[model.productAssignment(model.product)]['description1']}',
                               style: Constants.subtitle1,
                             )),
                           ),
@@ -78,7 +78,7 @@ class SuggestionsScreen extends StatelessWidget {
                       ? Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 10.0),
                           child: (Text(
-                            '- ${model.productDetail[model.bulma(model.product)]['description2']}',
+                            '- ${model.productDetail[model.productAssignment(model.product)]['description2']}',
                             style: Constants.subtitle1,
                           )),
                         )
@@ -89,66 +89,74 @@ class SuggestionsScreen extends StatelessWidget {
             const SizedBox(
               height: 25,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Column(
-                  children: [
-                    Image.asset(
-                      'assets/icon.png',
-                      scale: 0.9,
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    const Text(
-                      'Vitis vinifera',
-                      style: Constants.headline2,
-                    ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    const Icon(
-                      Icons.thermostat_outlined,
-                      size: 45,
-                      color: Constants.white,
-                    ),
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    const Text(
-                      'Uygun Sıcaklık',
-                      style: Constants.headline2,
-                    ),
-                    Text(
-                      '18-24C',
-                      style: Constants.headline2.apply(color: Constants.black),
-                    )
-                  ],
-                ),
-                Column(
-                  children: [
-                    const Icon(
-                      Icons.water_drop_outlined,
-                      size: 45,
-                      color: Constants.white,
-                    ),
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    const Text(
-                      'Uygun Nem',
-                      style: Constants.headline2,
-                    ),
-                    Text(
-                      '18-24C',
-                      style: Constants.headline2.apply(color: Constants.black),
-                    )
-                  ],
-                ),
-              ],
-            )
+            model.product != null
+                ? Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Column(
+                        children: [
+                          Image.asset(
+                            'assets/icon.png',
+                            scale: 0.9,
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            model.productDetail[
+                                    model.productAssignment(model.product)]
+                                ['microorganism'],
+                            style: Constants.headline2,
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          const Icon(
+                            Icons.thermostat_outlined,
+                            size: 45,
+                            color: Constants.white,
+                          ),
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          const Text(
+                            'Uygun Sıcaklık',
+                            style: Constants.headline2,
+                          ),
+                          Text(
+                            model.productDetail[
+                                model.productAssignment(model.product)]['heat'],
+                            style: Constants.headline2
+                                .apply(color: Constants.black),
+                          )
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          const Icon(
+                            Icons.water_drop_outlined,
+                            size: 45,
+                            color: Constants.white,
+                          ),
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          const Text(
+                            'Uygun Nem',
+                            style: Constants.headline2,
+                          ),
+                          Text(
+                            model.productDetail[model
+                                .productAssignment(model.product)]['moisture'],
+                            style: Constants.headline2
+                                .apply(color: Constants.black),
+                          )
+                        ],
+                      ),
+                    ],
+                  )
+                : const SizedBox()
           ],
         ),
       ),
