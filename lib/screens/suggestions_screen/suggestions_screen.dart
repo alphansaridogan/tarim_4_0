@@ -70,7 +70,7 @@ class SuggestionsScreen extends StatelessWidget {
                             )),
                           ),
                         )
-                      : const Text(''), //listedekine göre alanacak değer
+                      : const SizedBox(),
                   const SizedBox(
                     height: 10,
                   ),
