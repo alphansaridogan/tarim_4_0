@@ -13,7 +13,6 @@ class MainView extends StatefulWidget {
 }
 
 class _MainView extends State<MainView> {
-
   @override
   void initState() {
     MainView();
