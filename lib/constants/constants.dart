@@ -3,8 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 class Constants {
   //renkler
-  static Color green = const Color.fromRGBO(11, 172, 27, 1);
-  static Color lightGreen = const Color.fromRGBO(101, 248, 89, 1);
+  static const Color green =  Color.fromRGBO(11, 172, 27, 1);
+  static const Color lightGreen =  Color.fromRGBO(101, 248, 89, 1);
   static const Color white = Color.fromRGBO(255, 255, 255, 1);
   static const Color black = Colors.black;
 
