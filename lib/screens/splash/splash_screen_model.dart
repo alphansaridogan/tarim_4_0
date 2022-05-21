@@ -14,7 +14,7 @@ class SplashScreenModel extends BaseViewModel {
 
   initialise(BuildContext context) {
     Future.delayed(const Duration(seconds: 1), () {
-      Navigator.pushNamed(context, '/MainView');
+      Navigator.pushNamed(context, '/welcome');
     });
   }
 }

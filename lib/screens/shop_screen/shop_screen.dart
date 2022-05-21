@@ -5,6 +5,7 @@ import 'package:tarim_4_0/config/widget/product_widget.dart';
 import 'package:tarim_4_0/config/widget/text_field_widget.dart';
 import 'package:tarim_4_0/config/widget/top_seller_product_widget.dart';
 import 'package:tarim_4_0/constants/constants.dart';
+import 'package:tarim_4_0/screens/product_detail_screen/product_detail_screen.dart';
 import 'package:tarim_4_0/screens/shop_screen/shop_screen_model.dart';
 
 class ShopScreen extends StatelessWidget {
@@ -75,18 +76,31 @@ class ShopScreen extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: model.product
-                          .map((e) => ProductWidget(
-                                bacgroundColor: Colors.grey.shade300,
-                                size: size,
-                                url: model.product[e['ID']]['urlImage'],
-                                product: model.product[e['ID']]['adi'],
-                                productBrand: model.product[e['ID']]['brand'],
-                                productMeasurement:
-                                    '${model.product[e['ID']]['measurement'].toString()} Litre',
-                                productPrice:
-                                    '${model.product[e['ID']]['price'].toString()} ₺',
-                                onPressed: () {},
-                              ))
+                          .map(
+                            (e) => ProductWidget(
+                              bacgroundColor: Colors.grey.shade300,
+                              size: size,
+                              url: model.product[e['ID']]['urlImage'],
+                              product: model.product[e['ID']]['adi'],
+                              productBrand: model.product[e['ID']]['brand'],
+                              productMeasurement:
+                                  '${model.product[e['ID']]['measurement'].toString()} Litre',
+                              productPrice:
+                                  '${model.product[e['ID']]['price'].toString()} ₺',
+                              onPressed: () {},
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => ProductDetail(
+                                      productId: model.getProduct(
+                                          model.product[e['ID']]['ID']),
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                          )
                           .toList(),
                     ),
                   ),

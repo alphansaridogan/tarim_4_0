@@ -11,8 +11,9 @@ class SuggestionsScreenModel extends MainViewModel {
     );
   }
 
-  String? product;
   List<String> products = ['Üzüm', 'Elma'];
+  String? product = "Üzüm";
+
   List productDetail = [
     {
       'ID': 0,
