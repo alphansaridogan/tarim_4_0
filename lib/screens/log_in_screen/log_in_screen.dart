@@ -67,7 +67,9 @@ class LogInScreen extends StatelessWidget {
                               size: size,
                               height: 0.05,
                               color: Constants.lightGreen,
-                              onPressed: () {},
+                              onPressed: () {
+                                 Navigator.pushNamed(context, '/MainView');
+                              },
                               title: 'Giriş Yap',
                             ),
                             Row(

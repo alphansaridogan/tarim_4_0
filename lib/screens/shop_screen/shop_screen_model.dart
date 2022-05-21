@@ -11,6 +11,12 @@ class ShopScreenModel extends MainViewModel {
     );
   }
 
+  int productId = 1;
+
+  int getProduct(int productValue) {
+    return productId = productValue;
+  }
+
   List<dynamic> product = [
     {
       'ID': 0,
@@ -31,5 +37,4 @@ class ShopScreenModel extends MainViewModel {
       'price': 300,
     },
   ];
-  List a = [1, 2, 3, 4, 5];
 }

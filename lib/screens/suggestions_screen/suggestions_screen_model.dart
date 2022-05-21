@@ -11,8 +11,9 @@ class SuggestionsScreenModel extends MainViewModel {
     );
   }
 
-  String? product;
   List<String> products = ['Üzüm', 'Elma'];
+  String? product = "Üzüm";
+
   List productDetail = [
     {
       'ID': 0,
@@ -33,9 +34,9 @@ class SuggestionsScreenModel extends MainViewModel {
       'urlImage':
           'https://fidansepetim.com/uploads/p/p/3-Yas-Asili-Granny-Smith-Elma-Fidani-Yesil-Mayhos_1.jpg',
       'description1':
-          'Elma: Hava sıcaklıklarına bağlı olarak bu haftatoprak nemini %35 civarında tutulması önerilir.Küllenme hastalığı riskini önlemek için 15günde bir sıvı kükürt ile ilaçlama yapılmalıdır. İstenmeyen sürgünler budanmalı ana omcanın hava alması sağlanmalıdır.',
+          'Elma: Hava sıcaklıklarına bağlı olarak bu haftatoprak nemini %35 civarında tutulması önerilir.Küllenme hastalığı riskini önlemek için 15 günde bir sıvı kükürt ile ilaçlama yapılmalıdır. İstenmeyen sürgünler budanmalı ana omcanın hava alması sağlanmalıdır.',
       'description2':
-          'Elmaaa: Hava sıcaklıklarına bağlı olarak bu haftatoprak nemini %45 civarında tutulması önerilir.Küllenme hastalığı riskini önlemek için 15günde bir sıvı kükürt ile ilaçlama yapılmalıdır. İstenmeyen sürgünler budanmalı ana omcanın hava alması sağlanmalıdır.',
+          'Elmaaa: Hava sıcaklıklarına bağlı olarak bu haftatoprak nemini %45 civarında tutulması önerilir.Küllenme hastalığı riskini önlemek için 15 günde bir sıvı kükürt ile ilaçlama yapılmalıdır. İstenmeyen sürgünler budanmalı ana omcanın hava alması sağlanmalıdır.',
       'moisture': '%25-50',
       'heat': '8-30C',
       'microorganism': 'Elma kurdu :)',

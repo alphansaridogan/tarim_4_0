@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
+import 'package:tarim_4_0/config/widget/button_widget.dart';
+import 'package:tarim_4_0/constants/constants.dart';
 import 'package:tarim_4_0/screens/iot_screen/iot_screen_model.dart';
 
 class IotScreen extends StatelessWidget {
@@ -7,36 +9,88 @@ class IotScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return ViewModelBuilder<IotScreenModel>.reactive(
       viewModelBuilder: () => IotScreenModel(),
       onModelReady: (model) => model.init(),
       builder: (context, model, child) => Scaffold(
-        appBar: AppBar(
-          title: const Text('Tarım 4.0'),
-        ),
-        body: Column(
+        backgroundColor: Constants.green,
+        body: Stack(
           children: [
-            Center(
-              child: ElevatedButton(
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Container(
+                  height: size.height * 0.25,
+                ),
+                Container(
+                  height: size.height * 0.66,
+                  decoration: const BoxDecoration(
+                    color: Constants.white,
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(0),
+                    ),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(
+                      vertical: size.height * 0.12,
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Neden Tarım 4.0 Akıllı Sistemi Kullanmalıyız?",
+                          style:
+                              Constants.headline2.apply(color: Constants.black),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: model.text
+                              .map((e) => Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 20, top: 20),
+                                    child: Text(
+                                      "✅ $e",
+                                      style: Constants.subtitle1
+                                          .apply(color: Constants.black),
+                                    ),
+                                  ))
+                              .toList(),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Positioned(
+              width: size.width,
+              top: 75,
+              child: CircleAvatar(
+                backgroundColor: Constants.green,
+                radius: 100,
+                child: Image.asset("assets/logo.png"),
+              ),
+            ),
+            Positioned(
+              width: size.width,
+              bottom: size.height * 0.08,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: ButtonWidget(
+                  size: size,
+                  height: 0.06,
                   onPressed: () {
-                    Navigator.pushNamed(context, '/new_crop');
+                    Navigator.pushNamed(context, '/buy_iot');
                   },
-
-                  ///örnek geçiş olsun diye koydum
-                  child: const Text('Satın Al')),
-            ),
-            const SizedBox(
-              height: 50,
-            ),
-            Center(
-              child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/welcome');
-                  },
-
-                  ///örnek geçiş olsun diye koydum
-                  child: const Text('welcome')),
-            ),
+                  title: 'Satın Al',
+                  color: Constants.lightGreen,
+                ),
+              ),
+            )
           ],
         ),
       ),

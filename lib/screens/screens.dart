@@ -8,3 +8,4 @@ export 'new_crop_screen/new_crop_screen.dart';
 export 'shop_screen/shop_screen.dart';
 export 'sing_up_screen/sing_up_screen.dart';
 export 'welcome_screen/welcome_screen.dart';
+export 'product_detail_screen/product_detail_screen.dart';

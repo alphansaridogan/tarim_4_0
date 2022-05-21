@@ -9,9 +9,13 @@ class BuyIotScreenModel extends MainViewModel {
   static const String routeName = '/buy_iot';
   static Route route() {
     return MaterialPageRoute(
-      builder: (_) => const BuyIotScreen(),
+      builder: (_) => BuyIotScreen(),
       settings: const RouteSettings(name: routeName),
     );
   }
 
+  double template = 25.0;
+  double moilSoiture = 75;
+  double level = 300;
+  double irrigationSettingAmount = 60;
 }
