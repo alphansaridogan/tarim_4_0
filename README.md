@@ -82,7 +82,39 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
 ---
 
 # Sprint 2
+- **Sprint Notları:** User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir. 
 
+- **Sprint içinde tamamlanması tahmin edilen puan:** 170 Puan
+- **Puan tamamlama mantığı**: İlk oluşturduğumuz sprintte eksik kalan backlogları da dikkate aldığımız ve bu sprintte önceliğimiz ilk sprintten kalanları bitirmek olduğu için toplam 170 puan olarak düşünülmüştür.
+- **Backlog düzeni ve Story seçimleri:** Product Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint 2 için tahmin edilen puan sayısını geçmeyecek ve hepsini tamamlayacağımız bir sistemle önceliklendirme yapılmıştır.
+
+Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
+
+- **Daily Scrum:** Daily Scrum toplantılarının zamansal sebeplerden ve yoğunluktan dolayı Whatsapp üzerinden yapılmasına karar verilmiştir. Buna ek olarak Google Meets üzerinden 3 günde bir olacak şekilde görüntülü toplantı yapılmıştır. Daily Scrum toplantısı meeting buluşmaları ve konuşmaları jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: [�Bootcamp Takım 35 ile WhatsApp Sohbeti.txt]![Ekran Görüntüsü (87)](https://user-images.githubusercontent.com/76884034/169873215-b2b00b5a-c1c6-4b19-b497-2e24a58430d1.png)
+(https://github.com/alphansaridogan/tarim_4_0/files/8756874/Bootcamp.Takim.35.ile.WhatsApp.Sohbeti.txt)
+
+- **Sprint Board Update:** Sprint board schreenshotları 
+![sprint 2 ilk backlog](https://user-images.githubusercontent.com/76884034/169873488-3bdd6480-c148-4da7-8638-77266cbd2b5e.png)
+![sprint 2 ikinci backlog](https://user-images.githubusercontent.com/76884034/169873510-63f814eb-2253-4f83-a090-0ba3ae3a2a23.png)
+
+- **Ürün Durumu:** Ekran görüntüleri
+![ürün](https://user-images.githubusercontent.com/76884034/169874026-66fc607f-1332-4a28-adfc-50a6153b81f3.jpeg)
+![ürün2](https://user-images.githubusercontent.com/76884034/169874048-2970a062-0e80-4940-b28d-cc430031824c.jpeg)
+![ürün3](https://user-images.githubusercontent.com/76884034/169874061-ff58de43-f8e0-4dd2-8fb7-39dbb0e520a7.jpeg)
+![ürün6](https://user-images.githubusercontent.com/76884034/169874086-b30b250d-2c60-45b6-bce5-51143c826635.jpeg)
+![ürün7](https://user-images.githubusercontent.com/76884034/169874153-9068973c-52fc-4c29-9cbe-9edb84a316d4.jpeg)
+![ürünn](https://user-images.githubusercontent.com/76884034/169874170-0b18e7ad-2785-4171-94c7-8d8230da6511.jpeg)
+
+- **Sprint Review:** Alınan kararlar: Front-end kısımların birçoğu tamamlandığı için Back-end kısımlarında daha yavaş ve kontrollü çalışabileceğimiz konuşulmuştur. Bu sebeple ürünün çalışılabilirliğini kontrol etmek için daha fazla test yapmaya karar verilmiştir. Sprint Review katılımcıları:
+ - Esra Sude Aydemir: Scrum Master
+ - Melek Dursun: Product Owner
+ - Alphan Sarıdoğan: Developer
+ - Mehmet Demir: Developer
+ - Yaşar Alaca: Developer
+- **Sprint Retrospective:**
+   -  Ürün teslim tarihine az kaldığı için önceliklendirmelerin değiştirilmesine karar verilmiştir.
+   -  Meetinglerin daha sık yapılmasına karar verilmiştir.
+   -  Görevlerin yapılıp yapılmadığını daha sık kontrol edilmesinin sağlıklı olacağı konuşulmuştur.
 
 ---
 
