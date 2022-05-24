@@ -90,8 +90,9 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
 
 Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
 
-- **Daily Scrum:** Daily Scrum toplantılarının zamansal sebeplerden ve yoğunluktan dolayı Whatsapp üzerinden yapılmasına karar verilmiştir. Buna ek olarak Google Meets üzerinden 3 günde bir olacak şekilde görüntülü toplantı yapılmıştır. Daily Scrum toplantısı meeting buluşmaları ve konuşmaları jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: [�Bootcamp Takım 35 ile WhatsApp Sohbeti.txt]![Ekran Görüntüsü (87)](https://user-images.githubusercontent.com/76884034/169873215-b2b00b5a-c1c6-4b19-b497-2e24a58430d1.png)
-(https://github.com/alphansaridogan/tarim_4_0/files/8756874/Bootcamp.Takim.35.ile.WhatsApp.Sohbeti.txt)
+- **Daily Scrum:** Daily Scrum toplantılarının zamansal sebeplerden ve yoğunluktan dolayı Whatsapp üzerinden yapılmasına karar verilmiştir. Buna ek olarak Google Meets üzerinden 3 günde bir olacak şekilde görüntülü toplantı yapılmıştır. Daily Scrum toplantısı meeting buluşmaları ve konuşmaları jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: [�Bootcamp Takım 35 ile WhatsApp Sohbeti.txt](https://github.com/alphansaridogan/tarim_4_0/files/8756874/Bootcamp.Takim.35.ile.WhatsApp.Sohbeti.txt)
+- ![Ekran Görüntüsü (87)](https://user-images.githubusercontent.com/76884034/169873215-b2b00b5a-c1c6-4b19-b497-2e24a58430d1.png)
+
 
 - **Sprint Board Update:** Sprint board schreenshotları 
 ![sprint 2 ilk backlog](https://user-images.githubusercontent.com/76884034/169873488-3bdd6480-c148-4da7-8638-77266cbd2b5e.png)
