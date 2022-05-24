@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "338717367836",
+    "project_id": "tarim-7d9b2",
+    "storage_bucket": "tarim-7d9b2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338717367836:android:881655f69e0b8cfe0f09d9",
+        "android_client_info": {
+          "package_name": "com.example.ornek"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "338717367836-8h44nhfv4sh4ffu49jc4k60acgjg58k6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPg_ldr12c-Gz-m2s97K51WeL2INCSPno"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "338717367836-8h44nhfv4sh4ffu49jc4k60acgjg58k6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

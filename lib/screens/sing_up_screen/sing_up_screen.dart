@@ -55,17 +55,26 @@ class SingUpScreen extends StatelessWidget {
                               const SizedBox(
                                 height: 20,
                               ),
-                              TextFieldWidget(title: 'E-Mail', size: size),
+                              TextFieldWidget(
+                                title: 'E-Mail',
+                                size: size,
+                                controller: model.controllerEmail,
+                              ),
                               const SizedBox(
                                 height: 20,
                               ),
-                              TextFieldWidget(title: 'Şifre', size: size),
+                              TextFieldWidget(
+                                title: 'Şifre',
+                                size: size,
+                                controller: model.controllerPassword,
+                              ),
                               const SizedBox(
                                 height: 20,
                               ),
                               TextFieldWidget(
                                 title: 'Şifre Tekrar',
                                 size: size,
+                                controller: model.controllerPasswordContol,
                               ),
                               const SizedBox(
                                 height: 20,
@@ -74,7 +83,7 @@ class SingUpScreen extends StatelessWidget {
                                 size: size,
                                 height: 0.05,
                                 color: Constants.lightGreen,
-                                onPressed: () {},
+                                onPressed: model.createdPerson,
                                 title: 'Üye Ol',
                               ),
                               Row(
