@@ -56,9 +56,4 @@ class SuggestionsScreenModel extends MainViewModel {
     setBusy(true);
     return product = value!;
   }
-
-  String setProduct(String? value) {
-    setBusy(true);
-    return product = value!;
-  }
 }
