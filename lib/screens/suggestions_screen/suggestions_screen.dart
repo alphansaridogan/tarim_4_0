@@ -51,9 +51,7 @@ class SuggestionsScreen extends StatelessWidget {
                               Constants.headline1.apply(color: Constants.black),
                           list: model.products,
                           title: 'Ürün Seçiniz',
-                          onChanged: (value) {
-                            model.product = value;
-                          },
+                          onChanged: model.setProduct,
                           size: size)
                     ],
                   ),

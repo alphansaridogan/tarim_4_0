@@ -49,5 +49,11 @@ class SuggestionsScreenModel extends MainViewModel {
         return i;
       }
     }
+    notifyListeners();
+  }
+
+  String setProduct(String? value) {
+    setBusy(true);
+    return product = value!;
   }
 }

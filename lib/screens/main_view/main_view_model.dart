@@ -14,7 +14,6 @@ class MainViewModel extends BaseViewModel {
     );
   }
 
-
   final pageController = PageController();
 
   int currentPage = 0;
@@ -23,7 +22,7 @@ class MainViewModel extends BaseViewModel {
     return currentPage = index;
   }
 
- int pageControl(int index) {
+  int pageControl(int index) {
     pageController.jumpToPage(index);
     return currentPage = index;
   }
