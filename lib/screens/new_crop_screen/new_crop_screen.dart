@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 import 'package:tarim_4_0/config/widget/app_bar_widget.dart';
