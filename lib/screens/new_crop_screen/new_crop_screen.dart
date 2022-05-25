@@ -54,21 +54,16 @@ class NewCropScreen extends StatelessWidget {
                                 size: size,
                                 list: model.cities,
                                 title: 'Şehir Seçiniz',
-                                onChanged: (value) {
-                                  model.city = value;
-                                  //model taşımamız gerekiyor.
-                                },
+                                onChanged: model.setCities,
                               ),
                               const SizedBox(
                                 height: 20,
                               ),
                               DropDownWidget(
-                                value: model.conty,
+                                value: model.county,
                                 list: model.counties,
                                 title: 'İlçe Seçiniz',
-                                onChanged: (value) {
-                                  model.conty = value;
-                                },
+                                onChanged: model.setContry,
                                 size: size,
                               ),
                               const SizedBox(
@@ -78,9 +73,7 @@ class NewCropScreen extends StatelessWidget {
                                 value: model.product,
                                 list: model.products,
                                 title: 'Ürün Seçiniz',
-                                onChanged: (value) {
-                                  model.product = value;
-                                },
+                                onChanged: model.setProduct,
                                 size: size,
                               ),
                               const SizedBox(
@@ -93,10 +86,7 @@ class NewCropScreen extends StatelessWidget {
                                 divisions: 10,
                                 activeColor: Constants.green,
                                 inactiveColor: Constants.lightGreen,
-                                onChanged: (value) {
-                                  model.cultivationArea = value;
-                                  //modele taşınması gerekiyor.
-                                },
+                                onChanged: model.setCultivationArea,
                                 thumbColor: Constants.white,
                               ),
                               Center(
@@ -130,7 +120,7 @@ class NewCropScreen extends StatelessWidget {
                                 size: size,
                                 height: 0.05,
                                 borderColor: Constants.green,
-                                onPressed: () {},
+                                onPressed: model.newCrop,
                                 title: 'Yeni Ekin Ekle',
                               ),
                               const SizedBox(
@@ -140,7 +130,9 @@ class NewCropScreen extends StatelessWidget {
                                 size: size,
                                 height: 0.05,
                                 color: Constants.lightGreen,
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.pushNamed(context, "/buy_iot");
+                                },
                                 title: 'Devam Et',
                                 borderColor: Colors.black45,
                               ),

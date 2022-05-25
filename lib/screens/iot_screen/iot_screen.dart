@@ -84,7 +84,7 @@ class IotScreen extends StatelessWidget {
                   size: size,
                   height: 0.06,
                   onPressed: () {
-                    Navigator.pushNamed(context, '/buy_iot');
+                    Navigator.pushNamed(context, '/new_crop');
                   },
                   title: 'Satın Al',
                   color: Constants.lightGreen,
