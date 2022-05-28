@@ -12,6 +12,7 @@ class TextFieldWidget extends StatelessWidget {
   double radius;
   String title;
   TextStyle textStyle;
+  bool obscureText;
 
   TextFieldWidget({
     Key? key,
@@ -24,6 +25,7 @@ class TextFieldWidget extends StatelessWidget {
     required this.title,
     this.textStyle = Constants.subtitle1,
     required this.size,
+    this.obscureText = false,
   }) : super(key: key);
 
   @override
@@ -32,6 +34,7 @@ class TextFieldWidget extends StatelessWidget {
       height: size.height * height,
       width: size.width * width,
       child: TextField(
+        obscureText: obscureText,
         controller: controller,
         cursorColor: cursorColor,
         decoration: InputDecoration(

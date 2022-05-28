@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:stacked/stacked.dart';
 import 'package:tarim_4_0/config/widget/app_bar_widget.dart';
 import 'package:tarim_4_0/config/widget/button_widget.dart';
+import 'package:tarim_4_0/config/widget/flutter_toals.dart';
 import 'package:tarim_4_0/config/widget/sub_main_widget.dart';
 import 'package:tarim_4_0/config/widget/text_field_widget.dart';
 import 'package:tarim_4_0/constants/constants.dart';
@@ -56,6 +58,7 @@ class LogInScreen extends StatelessWidget {
                               height: 20,
                             ),
                             TextFieldWidget(
+                              obscureText: true,
                               size: size,
                               title: 'Şifre',
                               controller: model.controllerPassword,
@@ -68,8 +71,26 @@ class LogInScreen extends StatelessWidget {
                               height: 0.05,
                               color: Constants.lightGreen,
                               onPressed: () {
-                                model.signIn();
-                                Navigator.pushNamed(context, '/MainView');
+                                model.signIn().then((value) {
+                                  return Navigator.pushNamed(
+                                      context, '/MainView');
+                                }).catchError((dynamic error) {
+                                  if (error.code.contains("invalid-email")) {
+                                    FlutterToastWidget.buildErrorMessage(
+                                        "Mail adresi geçersisdir");
+                                  } else if (error.code
+                                      .contains("user-not-found")) {
+                                    FlutterToastWidget.buildErrorMessage(
+                                        "Böyle bir kullanıcı bulunamadı");
+                                  } else if (error.code
+                                      .contains("wrong-password")) {
+                                    FlutterToastWidget.buildErrorMessage(
+                                        "Parola yanlış");
+                                  } else if (error.code.contains("unknown")) {
+                                    FlutterToastWidget.buildErrorMessage(
+                                        "E-mail ya da parola alanı boş olamaz!");
+                                  }
+                                });
                               },
                               title: 'Giriş Yap',
                             ),

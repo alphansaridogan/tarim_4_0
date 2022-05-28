@@ -17,8 +17,8 @@ class LogInScreenModel extends MainViewModel {
     );
   }
 
-  signIn() {
-    _authService.signIn(
+   signIn() {
+    return _authService.signIn(
         controllerMail.text.trim(), controllerPassword.text.trim());
   }
 }

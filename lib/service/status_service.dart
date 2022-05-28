@@ -4,7 +4,7 @@ import 'package:tarim_4_0/model/new_crop_model.dart';
 class StatusService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
-  Future<NewCropModel>addStatus(String city, String county, String product,
+  Future<NewCropModel> addStatus(String city, String county, String product,
       double cultivationArea) async {
     var ref = _firestore.collection("Product");
 

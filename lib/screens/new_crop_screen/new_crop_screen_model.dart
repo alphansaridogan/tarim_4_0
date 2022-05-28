@@ -22,7 +22,6 @@ class NewCropScreenModel extends MainViewModel {
   String? county;
   String? product;
   double cultivationArea = 6.0;
-  
 
   String setProduct(String? value) {
     setBusy(true);
@@ -45,7 +44,14 @@ class NewCropScreenModel extends MainViewModel {
   }
 
   newCrop() {
-    _statusService.addStatus(
-        city!, county!, product!,cultivationArea);
+    return _statusService.addStatus(city!, county!, product!, cultivationArea);
+  }
+
+  void controllerClear() {
+    controllerCultivationArea.clear();
+    city = null;
+    county = null;
+    product = null;
+    notifyListeners();
   }
 }

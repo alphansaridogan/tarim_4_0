@@ -3,6 +3,7 @@ import 'package:stacked/stacked.dart';
 import 'package:tarim_4_0/config/widget/app_bar_widget.dart';
 import 'package:tarim_4_0/config/widget/button_widget.dart';
 import 'package:tarim_4_0/config/widget/drop_down_widget.dart';
+import 'package:tarim_4_0/config/widget/flutter_toals.dart';
 import 'package:tarim_4_0/config/widget/sub_main_widget.dart';
 import 'package:tarim_4_0/constants/constants.dart';
 import 'package:tarim_4_0/screens/new_crop_screen/new_crop_screen_model.dart';
@@ -19,21 +20,22 @@ class NewCropScreen extends StatelessWidget {
       builder: (context, model, child) => Scaffold(
         resizeToAvoidBottomInset: false,
         body: LayoutBuilder(
-            builder: (BuildContext context, BoxConstraints constraints) {
-          return Container(
-            color: Constants.green,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Expanded(
-                  flex: 2,
-                  child: AppBarWidget(
-                    size: size,
-                    title: "Yeni Ekin Bilgileri",
-                    subTitle: "Tarım arazisi hakkında bilgileri ekle ve başla",
+          builder: (BuildContext context, BoxConstraints constraints) {
+            return Container(
+              color: Constants.green,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Expanded(
+                    flex: 2,
+                    child: AppBarWidget(
+                      size: size,
+                      title: "Yeni Ekin Bilgileri",
+                      subTitle:
+                          "Tarım arazisi hakkında bilgileri ekle ve başla",
+                    ),
                   ),
-                ),
-                Expanded(
+                  Expanded(
                     flex: 5,
                     child: SubMainWidget(
                       size: size,
@@ -118,7 +120,20 @@ class NewCropScreen extends StatelessWidget {
                                 size: size,
                                 height: 0.05,
                                 borderColor: Constants.green,
-                                onPressed: model.newCrop,
+                                onPressed: () {
+                                  if (model.city == null ||
+                                      model.county == null ||
+                                      model.product == null ||
+                                      model.controllerCultivationArea == null) {
+                                    FlutterToastWidget.buildErrorMessage(
+                                        "Lütfen bütün alanları doldurduğunuzdan emin olun!");
+                                  } else {
+                                    model.newCrop();
+                                    FlutterToastWidget.buildErrorMessage(
+                                        "Ürün başarılı bir şekilde eklendi");
+                                    model.controllerClear();
+                                  }
+                                },
                                 title: 'Yeni Ekin Ekle',
                               ),
                               const SizedBox(
@@ -130,6 +145,7 @@ class NewCropScreen extends StatelessWidget {
                                 color: Constants.lightGreen,
                                 onPressed: () {
                                   Navigator.pushNamed(context, "/buy_iot");
+                                  model.controllerClear();
                                 },
                                 title: 'Devam Et',
                                 borderColor: Colors.black45,
@@ -138,11 +154,13 @@ class NewCropScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                    ))
-              ],
-            ),
-          );
-        }),
+                    ),
+                  ),
+                ],
+              ),
+            );
+          },
+        ),
       ),
     );
   }

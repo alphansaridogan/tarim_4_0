@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 import 'package:tarim_4_0/config/widget/app_bar_widget.dart';
 import 'package:tarim_4_0/config/widget/button_widget.dart';
+import 'package:tarim_4_0/config/widget/flutter_toals.dart';
 import 'package:tarim_4_0/config/widget/sub_main_widget.dart';
 import 'package:tarim_4_0/config/widget/text_field_widget.dart';
 import 'package:tarim_4_0/constants/constants.dart';
@@ -64,6 +65,7 @@ class SingUpScreen extends StatelessWidget {
                                 height: 20,
                               ),
                               TextFieldWidget(
+                                obscureText: true,
                                 title: 'Şifre',
                                 size: size,
                                 controller: model.controllerPassword,
@@ -72,9 +74,10 @@ class SingUpScreen extends StatelessWidget {
                                 height: 20,
                               ),
                               TextFieldWidget(
+                                obscureText: true,
                                 title: 'Şifre Tekrar',
                                 size: size,
-                                controller: model.controllerPasswordContol,
+                                controller: model.controllerPasswordControl,
                               ),
                               const SizedBox(
                                 height: 20,
@@ -83,7 +86,29 @@ class SingUpScreen extends StatelessWidget {
                                 size: size,
                                 height: 0.05,
                                 color: Constants.lightGreen,
-                                onPressed: model.createdPerson,
+                                onPressed: () {
+                                  model.createdPerson().then((value) {
+                                    return Navigator.pushNamed(
+                                        context, '/login');
+                                  }).catchError((dynamic error) {
+                                    if (error.code.contains("unknown")) {
+                                      FlutterToastWidget.buildErrorMessage(
+                                          "Bütün alanların dolu olması gerekmektedir");
+                                    } else if (error.code
+                                        .contains("invalid-email")) {
+                                      FlutterToastWidget.buildErrorMessage(
+                                          "Mail adresi geçersisdir");
+                                    } else if (error.code
+                                        .contains("weak-password")) {
+                                      FlutterToastWidget.buildErrorMessage(
+                                          "Parola en az 6 karakter olması gerekmektedir");
+                                    } else if (model.controllerPassword !=
+                                        model.controllerPasswordControl) {
+                                      FlutterToastWidget.buildErrorMessage(
+                                          "Parola uyuşmamaktadır");
+                                    }
+                                  });
+                                },
                                 title: 'Üye Ol',
                               ),
                               Row(
