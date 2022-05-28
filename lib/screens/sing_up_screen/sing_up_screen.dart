@@ -97,7 +97,7 @@ class SingUpScreen extends StatelessWidget {
                                     } else if (error.code
                                         .contains("invalid-email")) {
                                       FlutterToastWidget.buildErrorMessage(
-                                          "Mail adresi geçersisdir");
+                                          "Mail adresi geçersizdir");
                                     } else if (error.code
                                         .contains("weak-password")) {
                                       FlutterToastWidget.buildErrorMessage(
@@ -105,7 +105,7 @@ class SingUpScreen extends StatelessWidget {
                                     } else if (model.controllerPassword !=
                                         model.controllerPasswordControl) {
                                       FlutterToastWidget.buildErrorMessage(
-                                          "Parola uyuşmamaktadır");
+                                          "Girilen parolalar uyuşmamaktadır");
                                     }
                                   });
                                 },
