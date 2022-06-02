@@ -68,16 +68,27 @@ class IotScreen extends StatelessWidget {
             ),
             Positioned(
               width: size.width,
-              top: 75,
-              child: CircleAvatar(
-                backgroundColor: Constants.green,
-                radius: 100,
-                child: Image.asset("assets/logo.png"),
+              top: 100,
+              child: Container(
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  boxShadow: [BoxShadow(
+                    blurRadius: 10,
+                    color: Colors.grey,
+                    spreadRadius: 4,
+                  )],
+                ),
+                child: CircleAvatar(
+                  backgroundColor: Constants.white,
+                  radius: 70,
+                  child: Image.asset("assets/logo.png",
+                  height: 80),
+                ),
               ),
             ),
             Positioned(
               width: size.width,
-              bottom: size.height * 0.08,
+              bottom: size.height * 0.03,
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 child: ButtonWidget(
