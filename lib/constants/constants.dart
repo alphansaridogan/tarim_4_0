@@ -7,6 +7,8 @@ class Constants {
   static const Color lightGreen =  Color.fromRGBO(101, 248, 89, 1);
   static const Color white = Color.fromRGBO(255, 255, 255, 1);
   static const Color black = Colors.black;
+  static const Color blue = Colors.blue;
+  static const Color lightBlueAccent = Colors.lightBlueAccent;
 
   //Başlık için kullanılan textstyle'lar
   static const TextStyle headline1 = TextStyle(

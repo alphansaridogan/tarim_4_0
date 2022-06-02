@@ -74,6 +74,10 @@ class _BuyIotScreenState extends State<BuyIotScreen> {
       ToprakNemDouble = double.parse(ToprakNemStr.value);
     }
 
+    ToprakNemDouble ??= 0.0;
+    OrtamNemDouble ??= 0.0;
+    OrtamSicaklikDouble ??= 0.0;
+
 
 
 

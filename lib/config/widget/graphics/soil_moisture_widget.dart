@@ -57,8 +57,8 @@ class SoilMoistureWidget extends StatelessWidget {
                   animationDuration: 1200,
                   sizeUnit: GaugeSizeUnit.factor,
                   gradient: const SweepGradient(colors: <Color>[
-                    Constants.green,
-                    Constants.green,
+                    Constants.lightBlueAccent,
+                    Constants.blue,
                   ], stops: <double>[
                     0.55,
                     0.75
