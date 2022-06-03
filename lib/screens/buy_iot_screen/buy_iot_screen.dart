@@ -1,9 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:stacked/stacked.dart';
-import 'package:tarim_4_0/config/widget/graphics/irrigation_setting_widget.dart';
 import 'package:tarim_4_0/config/widget/graphics/soil_moisture_widget.dart';
 import 'package:tarim_4_0/config/widget/graphics/template_widget.dart';
 import 'package:tarim_4_0/constants/constants.dart';
@@ -33,6 +34,7 @@ class _BuyIotScreenState extends State<BuyIotScreen> {
   var OrtamSicaklik;
   var OrtamNem;
   var ToprakNem;
+  double currentSliderValue = 20;
 
 
   @override
@@ -157,10 +159,37 @@ class _BuyIotScreenState extends State<BuyIotScreen> {
                         style:
                         Constants.headline1.apply(color: Constants.black),
                       ),
-                      IrrigationSettingWidget(
-                        annotationValue:
-                        model.irrigationSettingAmount.toString(),
-                        irrigationSettingAmount: model.irrigationSettingAmount,
+                    Slider(
+                      value: currentSliderValue,
+                      max: 100,
+                      divisions: 100,
+                      label: currentSliderValue.round().toString(),
+                      onChanged: (double value) {
+                        setState(() {
+                          currentSliderValue = value;
+                        });
+                      },
+                    ),
+                      Text('%$currentSliderValue',
+                      style: TextStyle(
+                        fontSize: 24,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 70,
+                      ),
+                      SizedBox(
+                        height: 100,
+                        child: Image.asset('assets/logo.png',
+                        ),
+                      ),
+                      Text('TARIM 4.0',
+                      style: GoogleFonts.play(
+                        fontSize: 22,
+                      ),
+                      ),
+                      SizedBox(
+                        height: 70,
                       ),
                     ],
                   ),
