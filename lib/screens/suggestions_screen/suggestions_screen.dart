@@ -64,7 +64,7 @@ class SuggestionsScreen extends StatelessWidget {
                                 const EdgeInsets.symmetric(horizontal: 10.0),
                             child: Center(
                               child: (Text(
-                                '- ${model.productDetail[model.productAssignment(model.product)]['description1']}',
+                                '✅ ${model.productDetail[model.productAssignment(model.product)]['description1']}',
                                 style: Constants.subtitle1,
                               )),
                             ),
@@ -78,7 +78,7 @@ class SuggestionsScreen extends StatelessWidget {
                             padding:
                                 const EdgeInsets.symmetric(horizontal: 10.0),
                             child: (Text(
-                              '- ${model.productDetail[model.productAssignment(model.product)]['description2']}',
+                              '✅ ${model.productDetail[model.productAssignment(model.product)]['description2']}',
                               style: Constants.subtitle1,
                             )),
                           )

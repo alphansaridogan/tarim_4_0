@@ -23,7 +23,7 @@ class SuggestionsScreenModel extends MainViewModel {
       'description1':
           'Hava sıcaklıklarına bağlı olarak bu haftatoprak nemini %35 civarında tutulması önerilir.',
       'description2':
-          'Elmaaa: Küllenme hastalığı riskini önlemek için 15günde bir sıvı kükürt ile ilaçlama yapılmalıdır. İstenmeyen sürgünler budanmalı ana omcanın hava alması sağlanmalıdır.',
+          'Küllenme hastalığı riskini önlemek için 15günde bir sıvı kükürt ile ilaçlama yapılmalıdır. İstenmeyen sürgünler budanmalı ana omcanın hava alması sağlanmalıdır.',
       'moisture': '%12-40',
       'heat': '18-24C',
       'microorganism': 'Vitis vinifera',
@@ -34,8 +34,8 @@ class SuggestionsScreenModel extends MainViewModel {
       'urlImage':
           'https://fidansepetim.com/uploads/p/p/3-Yas-Asili-Granny-Smith-Elma-Fidani-Yesil-Mayhos_1.jpg',
       'description1':
-          'Elma: Hava sıcaklıklarına bağlı olarak bu haftatoprak nemini %35 civarında tutulması önerilir.Küllenme hastalığı riskini önlemek için 15 günde bir sıvı kükürt ile ilaçlama yapılmalıdır. İstenmeyen sürgünler budanmalı ana omcanın hava alması sağlanmalıdır.',
-      'description2': '',
+          'Bahçenin sürümüne özen gösterilmeli ve ağaç gövdelerine haziran ayı başlarında oluklu mukavvadan tuzak bantlar sarılmalı, bunlara gelen larvalar haftalık kontrollerle imha edilmelidir.',
+      'description2': 'Elma ağaçlarının altına dökülen meyveler toplanıp uzaklaştırılmalı, ambalaj ve depolama yerleri elma bahçelerinin kenarına kurulmamalıdır.',
       'moisture': '%25-50',
       'heat': '8-30C',
       'microorganism': 'Elma kurdu',
