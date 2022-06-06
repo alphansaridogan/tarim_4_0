@@ -21,13 +21,13 @@ class BuyIotScreen extends StatefulWidget {
 }
 
 class _BuyIotScreenState extends State<BuyIotScreen> {
-  final IotService _service= IotService();   //---
-  List<IotInfoModelFeeds?>? infos;  //---
+  final IotService _service = IotService();
+  List<IotInfoModelFeeds?>? infos;
 
-  var OrtamSicakikStr ="".obs;
+  var OrtamSicakikStr = "".obs;
   var OrtamNemStr = "".obs;
   var ToprakNemStr = "".obs;
-  var Saat= "".obs;
+  var Saat = "".obs;
   var OrtamNemDouble;
   var OrtamSicaklikDouble;
   var ToprakNemDouble;
@@ -35,7 +35,6 @@ class _BuyIotScreenState extends State<BuyIotScreen> {
   var OrtamNem;
   var ToprakNem;
   double currentSliderValue = 20;
-
 
   @override
   void initState() {
@@ -45,13 +44,11 @@ class _BuyIotScreenState extends State<BuyIotScreen> {
     super.initState();
   }
 
-  void getir(){
+  void getir() {
     _service.fetchInfo().then((value) {
-      if(value!=null && value.feeds!=null) {
-        print(value);
-        setState ((){
+      if (value != null && value.feeds != null) {
+        setState(() {
           infos = value.feeds;
-          //var t = infos?[0];
         });
       }
     });
@@ -60,7 +57,7 @@ class _BuyIotScreenState extends State<BuyIotScreen> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    if (infos != null ){
+    if (infos != null) {
       OrtamSicakikStr.value = '${infos?[0]?.field1 ?? ""}';
       OrtamNemStr.value = '${infos?[0]?.field2 ?? ""}';
       ToprakNemStr.value = '${infos?[0]?.field3 ?? ""}';
@@ -72,16 +69,13 @@ class _BuyIotScreenState extends State<BuyIotScreen> {
     if (OrtamSicakikStr.value != "") {
       OrtamSicaklikDouble = double.parse(OrtamSicakikStr.value);
     }
-    if (ToprakNemStr.value != "" ) {
+    if (ToprakNemStr.value != "") {
       ToprakNemDouble = double.parse(ToprakNemStr.value);
     }
 
     ToprakNemDouble ??= 0.0;
     OrtamNemDouble ??= 0.0;
     OrtamSicaklikDouble ??= 0.0;
-
-
-
 
     return ViewModelBuilder<BuyIotScreenModel>.reactive(
       viewModelBuilder: () => BuyIotScreenModel(),
@@ -99,14 +93,22 @@ class _BuyIotScreenState extends State<BuyIotScreen> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        "Tarlamın Durumu",
-                        style: Constants.googleHeadline1,
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "Tarlamın Durumu",
+                          style: Constants.googleHeadline1,
+                        ),
                       ),
-                      Text('$Saat',
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),),
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          ' En son güncelleme tarihi: $Saat',
+                          style: const TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -130,65 +132,68 @@ class _BuyIotScreenState extends State<BuyIotScreen> {
                       Text(
                         "Ortam Sıcaklık",
                         style:
-                        Constants.headline1.apply(color: Constants.black),
+                            Constants.headline1.apply(color: Constants.black),
                       ),
                       TemplateWidget(template: OrtamSicaklikDouble),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Text(
                         "Ortam Nemi",
                         style:
-                        Constants.headline1.apply(color: Constants.black),
+                            Constants.headline1.apply(color: Constants.black),
                       ),
                       SoilMoistureWidget(soilMoisture: OrtamNemDouble),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Text(
                         "Toprak Nemi",
                         style:
-                        Constants.headline1.apply(color: Constants.black),
+                            Constants.headline1.apply(color: Constants.black),
                       ),
                       SoilMoistureWidget(soilMoisture: ToprakNemDouble),
-                      SizedBox(
+                      const SizedBox(
                         height: 40,
                       ),
                       Text(
                         "Sulama Ayarı",
                         style:
-                        Constants.headline1.apply(color: Constants.black),
+                            Constants.headline1.apply(color: Constants.black),
                       ),
-                    Slider(
-                      value: currentSliderValue,
-                      max: 100,
-                      divisions: 100,
-                      label: currentSliderValue.round().toString(),
-                      onChanged: (double value) {
-                        setState(() {
-                          currentSliderValue = value;
-                        });
-                      },
-                    ),
-                      Text('%$currentSliderValue',
-                      style: TextStyle(
-                        fontSize: 24,
+                      Slider(
+                        value: currentSliderValue,
+                        max: 100,
+                        divisions: 100,
+                        label: currentSliderValue.round().toString(),
+                        onChanged: (double value) {
+                          setState(() {
+                            currentSliderValue = value;
+                          });
+                        },
+                      ),
+                      Text(
+                        '%$currentSliderValue',
+                        style: const TextStyle(
+                          fontSize: 24,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 70,
                       ),
                       SizedBox(
                         height: 100,
-                        child: Image.asset('assets/logo.png',
+                        child: Image.asset(
+                          'assets/logo.png',
                         ),
                       ),
-                      Text('TARIM 4.0',
-                      style: GoogleFonts.play(
-                        fontSize: 22,
+                      Text(
+                        'TARIM 4.0',
+                        style: GoogleFonts.play(
+                          fontSize: 22,
+                        ),
                       ),
-                      ),
-                      SizedBox(
+                      const SizedBox(
                         height: 70,
                       ),
                     ],
