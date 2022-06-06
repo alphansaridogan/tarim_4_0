@@ -77,26 +77,29 @@ class ShopScreen extends StatelessWidget {
                     physics: const BouncingScrollPhysics(),
                     scrollDirection: Axis.horizontal,
                     child: Row(
-                      children: model.product
+                      children: model.agriculturalProducts
                           .map(
                             (e) => ProductWidget(
                               bacgroundColor: Colors.grey.shade300,
                               size: size,
-                              url: model.product[e['ID']]['urlImage'],
-                              product: model.product[e['ID']]['adi'],
-                              productBrand: model.product[e['ID']]['brand'],
+                              url: model.agriculturalProducts[e['ID']]
+                                  ['urlImage'],
+                              product: model.agriculturalProducts[e['ID']]
+                                  ['adi'],
+                              productBrand: model.agriculturalProducts[e['ID']]
+                                  ['brand'],
                               productMeasurement:
-                                  '${model.product[e['ID']]['measurement'].toString()} Litre',
+                                  '${model.agriculturalProducts[e['ID']]['measurement'].toString()} Litre',
                               productPrice:
-                                  '${model.product[e['ID']]['price'].toString()} ₺',
+                                  '${model.agriculturalProducts[e['ID']]['price'].toString()} ₺',
                               onPressed: () {},
                               onTap: () {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                     builder: (context) => ProductDetail(
-                                      productId: model.getProduct(
-                                          model.product[e['ID']]['ID']),
+                                      productId: model.getProduct(model
+                                          .agriculturalProducts[e['ID']]['ID']),
                                     ),
                                   ),
                                 );
@@ -117,16 +120,19 @@ class ShopScreen extends StatelessWidget {
                     height: 5,
                   ),
                   Column(
-                    children: model.product
+                    children: model.agriculturalProducts
                         .map((e) => TopSellerProductWidget(
                               size: size,
-                              product: model.product[e['ID']]['adi'],
-                              productBrand: model.product[e['ID']]['brand'],
+                              product: model.agriculturalProducts[e['ID']]
+                                  ['adi'],
+                              productBrand: model.agriculturalProducts[e['ID']]
+                                  ['brand'],
                               productMeasurement:
-                                  '${model.product[e['ID']]['measurement'].toString()} Litre',
+                                  '${model.agriculturalProducts[e['ID']]['measurement'].toString()} Litre',
                               productPrice:
-                                  '${model.product[e['ID']]['price'].toString()} ₺',
-                              url: model.product[e['ID']]['urlImage'],
+                                  '${model.agriculturalProducts[e['ID']]['price'].toString()} ₺',
+                              url: model.agriculturalProducts[e['ID']]
+                                  ['urlImage'],
                             ))
                         .toList(),
                   )

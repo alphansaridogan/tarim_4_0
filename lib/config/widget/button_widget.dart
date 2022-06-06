@@ -7,6 +7,7 @@ class ButtonWidget extends StatelessWidget {
   void Function()? onPressed;
   String title;
   double? height;
+  double? width;
   double? radius;
   Color? color;
   TextStyle? textStyle;
@@ -17,6 +18,7 @@ class ButtonWidget extends StatelessWidget {
     required this.size,
     required this.onPressed,
     required this.title,
+    this.width = 0.95,
     this.height = 0.03,
     this.radius = 15,
     this.color = Constants.white,
@@ -27,6 +29,7 @@ class ButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
+      minWidth: size.width * width!,
       height: size.height * height!,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(radius!),

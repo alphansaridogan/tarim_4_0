@@ -70,7 +70,7 @@ class NewCropScreen extends StatelessWidget {
                                 height: 20,
                               ),
                               DropDownWidget(
-                                value: model.product,
+                                value: model.agriculturalProduct,
                                 list: model.products,
                                 title: 'Ürün Seçiniz',
                                 onChanged: model.setProduct,
@@ -123,7 +123,7 @@ class NewCropScreen extends StatelessWidget {
                                 onPressed: () {
                                   if (model.city == null ||
                                       model.county == null ||
-                                      model.product == null ||
+                                      model.agriculturalProduct == null ||
                                       model.controllerCultivationArea == null) {
                                     FlutterToastWidget.buildErrorMessage(
                                         "Lütfen bütün alanları doldurduğunuzdan emin olun!");

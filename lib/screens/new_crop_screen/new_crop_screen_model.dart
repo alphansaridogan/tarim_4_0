@@ -20,12 +20,12 @@ class NewCropScreenModel extends MainViewModel {
   TextEditingController controllerCultivationArea = TextEditingController();
   String? city;
   String? county;
-  String? product;
+  String? agriculturalProduct;
   double cultivationArea = 6.0;
 
   String setProduct(String? value) {
     setBusy(true);
-    return product = value!;
+    return agriculturalProduct = value!;
   }
 
   String setCities(String? value) {
@@ -44,14 +44,15 @@ class NewCropScreenModel extends MainViewModel {
   }
 
   newCrop() {
-    return _statusService.addStatus(city!, county!, product!, cultivationArea);
+    return _statusService.addStatus(
+        city!, county!, agriculturalProduct!, cultivationArea);
   }
 
   void controllerClear() {
     controllerCultivationArea.clear();
     city = null;
     county = null;
-    product = null;
+    agriculturalProduct = null;
     notifyListeners();
   }
 }

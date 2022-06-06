@@ -12,7 +12,7 @@ class SuggestionsScreenModel extends MainViewModel {
   }
 
   List<String> products = ['Üzüm', 'Elma'];
-  String? product = "Üzüm";
+  String? agriculturalProduct = "Üzüm";
 
   List productDetail = [
     {
@@ -35,7 +35,8 @@ class SuggestionsScreenModel extends MainViewModel {
           'https://fidansepetim.com/uploads/p/p/3-Yas-Asili-Granny-Smith-Elma-Fidani-Yesil-Mayhos_1.jpg',
       'description1':
           'Bahçenin sürümüne özen gösterilmeli ve ağaç gövdelerine haziran ayı başlarında oluklu mukavvadan tuzak bantlar sarılmalı, bunlara gelen larvalar haftalık kontrollerle imha edilmelidir.',
-      'description2': 'Elma ağaçlarının altına dökülen meyveler toplanıp uzaklaştırılmalı, ambalaj ve depolama yerleri elma bahçelerinin kenarına kurulmamalıdır.',
+      'description2':
+          'Elma ağaçlarının altına dökülen meyveler toplanıp uzaklaştırılmalı, ambalaj ve depolama yerleri elma bahçelerinin kenarına kurulmamalıdır.',
       'moisture': '%25-50',
       'heat': '8-30C',
       'microorganism': 'Elma kurdu',
@@ -53,6 +54,6 @@ class SuggestionsScreenModel extends MainViewModel {
 
   String setProduct(String? value) {
     setBusy(true);
-    return product = value!;
+    return agriculturalProduct = value!;
   }
 }

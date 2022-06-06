@@ -121,7 +121,7 @@ class ProductDetail extends StatelessWidget {
                                                       ),
                                                       const SizedBox(height: 5),
                                                       Text(
-                                                          "${model.product[productId]['measurement'].toString()} Litre")
+                                                          "${model.agriculturalProducts[productId]['measurement'].toString()} Litre")
                                                     ],
                                                   ),
                                                 ),
@@ -159,7 +159,7 @@ class ProductDetail extends StatelessWidget {
                                                       ),
                                                       const SizedBox(height: 5),
                                                       Text(
-                                                          "${model.product[productId]['price'].toString()} ₺"),
+                                                          "${model.agriculturalProducts[productId]['price'].toString()} ₺"),
                                                     ],
                                                   ),
                                                 ),
@@ -170,29 +170,13 @@ class ProductDetail extends StatelessWidget {
                                             height: 25,
                                           ),
                                           Text(
-                                            model.product[productId]
+                                            model.agriculturalProducts[productId]
                                                 ['description'],
                                             style: Constants.subtitle2,
                                           ),
                                           const SizedBox(
                                             height: 47,
                                           ),
-                                          ButtonWidget(
-                                              size: size,
-                                              borderColor: Constants.green,
-                                              height: 0.06,
-                                              onPressed: () {},
-                                              title: "Sepete Ekle"),
-                                          const SizedBox(
-                                            height: 10,
-                                          ),
-                                          ButtonWidget(
-                                              size: size,
-                                              borderColor: Constants.black,
-                                              color: Constants.lightGreen,
-                                              height: 0.06,
-                                              onPressed: () {},
-                                              title: "Satın Al")
                                         ],
                                       ),
                                     ),
@@ -210,8 +194,8 @@ class ProductDetail extends StatelessWidget {
                         child: SizedBox(
                             width: size.width * 0.40,
                             height: size.width * 0.40,
-                            child: Image.network(
-                                model.product[productId]["urlImage"])),
+                            child: Image.network(model
+                                .agriculturalProducts[productId]["urlImage"])),
                       ),
                       Positioned(
                         width: size.width,
@@ -224,15 +208,39 @@ class ProductDetail extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                model.product[productId]['adi'],
+                                model.agriculturalProducts[productId]['adi'],
                                 style: Constants.headline1
                                     .apply(color: Constants.black),
                               ),
-                              Text(model.product[productId]['brand']),
+                              Text(model.agriculturalProducts[productId]
+                                  ['brand']),
                             ],
                           ),
                         ),
                       ),
+                      Positioned(
+                        left: 10,
+                        right: 10,
+                        bottom: size.height * 0.14,
+                        child: ButtonWidget(
+                            size: size,
+                            borderColor: Constants.green,
+                            height: 0.06,
+                            onPressed: () {},
+                            title: "Sepete Ekle"),
+                      ),
+                      Positioned(
+                        left: 10,
+                        right: 10,
+                        bottom: size.height * 0.07,
+                        child: ButtonWidget(
+                            size: size,
+                            borderColor: Constants.black,
+                            color: Constants.lightGreen,
+                            height: 0.06,
+                            onPressed: () {},
+                            title: "Satın Al"),
+                      )
                     ],
                   ),
                 ),

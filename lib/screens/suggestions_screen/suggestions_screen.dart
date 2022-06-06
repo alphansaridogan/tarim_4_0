@@ -36,16 +36,16 @@ class SuggestionsScreen extends StatelessWidget {
                       children: [
                         SizedBox(
                           width: size.width * 0.45,
-                          child: model.product != null
+                          child: model.agriculturalProduct != null
                               ? Image.network(
                                   model.productDetail[model.productAssignment(
-                                      model.product)]['urlImage'],
+                                      model.agriculturalProduct)]['urlImage'],
                                 )
                               : const SizedBox(),
                         ),
                         DropDownWidget(
                             borderColor: Constants.white,
-                            value: model.product,
+                            value: model.agriculturalProduct,
                             width: 0.5,
                             textStyle: Constants.headline1
                                 .apply(color: Constants.black),
@@ -58,13 +58,13 @@ class SuggestionsScreen extends StatelessWidget {
                     const SizedBox(
                       height: 20,
                     ),
-                    model.product != null
+                    model.agriculturalProduct != null
                         ? Padding(
                             padding:
                                 const EdgeInsets.symmetric(horizontal: 10.0),
                             child: Center(
                               child: (Text(
-                                '✅ ${model.productDetail[model.productAssignment(model.product)]['description1']}',
+                                '✅ ${model.productDetail[model.productAssignment(model.agriculturalProduct)]['description1']}',
                                 style: Constants.subtitle1,
                               )),
                             ),
@@ -73,12 +73,12 @@ class SuggestionsScreen extends StatelessWidget {
                     const SizedBox(
                       height: 10,
                     ),
-                    model.product != null
+                    model.agriculturalProduct != null
                         ? Padding(
                             padding:
                                 const EdgeInsets.symmetric(horizontal: 10.0),
                             child: (Text(
-                              '✅ ${model.productDetail[model.productAssignment(model.product)]['description2']}',
+                              '✅ ${model.productDetail[model.productAssignment(model.agriculturalProduct)]['description2']}',
                               style: Constants.subtitle1,
                             )),
                           )
@@ -90,7 +90,7 @@ class SuggestionsScreen extends StatelessWidget {
             const SizedBox(
               height: 25,
             ),
-            model.product != null
+            model.agriculturalProduct != null
                 ? Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -104,9 +104,8 @@ class SuggestionsScreen extends StatelessWidget {
                             height: 10,
                           ),
                           Text(
-                            model.productDetail[
-                                    model.productAssignment(model.product)]
-                                ['microorganism'],
+                            model.productDetail[model.productAssignment(
+                                model.agriculturalProduct)]['microorganism'],
                             style: Constants.headline2,
                           ),
                         ],
@@ -126,8 +125,8 @@ class SuggestionsScreen extends StatelessWidget {
                             style: Constants.headline2,
                           ),
                           Text(
-                            model.productDetail[
-                                model.productAssignment(model.product)]['heat'],
+                            model.productDetail[model.productAssignment(
+                                model.agriculturalProduct)]['heat'],
                             style: Constants.headline2
                                 .apply(color: Constants.black),
                           )
@@ -148,8 +147,8 @@ class SuggestionsScreen extends StatelessWidget {
                             style: Constants.headline2,
                           ),
                           Text(
-                            model.productDetail[model
-                                .productAssignment(model.product)]['moisture'],
+                            model.productDetail[model.productAssignment(
+                                model.agriculturalProduct)]['moisture'],
                             style: Constants.headline2
                                 .apply(color: Constants.black),
                           )
