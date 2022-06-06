@@ -41,7 +41,7 @@ class _BuyIotScreenState extends State<BuyIotScreen> {
   void initState() {
     getir();
     _service.fetchInfo();
-    _timer = Timer.periodic(const Duration(seconds: 60), (timer) => getir());
+    _timer = Timer.periodic(const Duration(seconds: 10), (timer) => getir());
     super.initState();
   }
 
@@ -54,13 +54,13 @@ class _BuyIotScreenState extends State<BuyIotScreen> {
   void getir() {
     _service.fetchInfo().then((value) {
       if (value != null && value.feeds != null) {
-        print('data çekti');
         setState(() {
           infos = value.feeds;
         });
       }
     });
   }
+ 
 
   @override
   Widget build(BuildContext context) {
