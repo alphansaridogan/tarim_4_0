@@ -35,18 +35,26 @@ class _BuyIotScreenState extends State<BuyIotScreen> {
   var OrtamNem;
   var ToprakNem;
   double currentSliderValue = 20;
+  late Timer _timer;
 
   @override
   void initState() {
     getir();
     _service.fetchInfo();
-    Timer.periodic(const Duration(seconds: 10), (timer) => getir());
+    _timer = Timer.periodic(const Duration(seconds: 60), (timer) => getir());
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    _timer.cancel();
+    super.dispose();
   }
 
   void getir() {
     _service.fetchInfo().then((value) {
       if (value != null && value.feeds != null) {
+        print('data çekti');
         setState(() {
           infos = value.feeds;
         });

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
+import 'package:tarim_4_0/config/widget/drop_down_widget.dart';
 import 'package:tarim_4_0/config/widget/news_widget.dart';
 import 'package:tarim_4_0/constants/constants.dart';
 import 'package:tarim_4_0/screens/home_screen/home_screen_model.dart';
@@ -19,9 +20,11 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   WeatherService weatherService = WeatherService();
   Weather? data;
+  var Cities=["Izmir", "Istanbul", "Ankara"];
+  String dropdownvalue = 'Izmir';
 
   Future<void> getData() async {
-    data = await weatherService.getWeather('Izmir');
+    data = await weatherService.getWeather('${dropdownvalue}');
   }
 
   @override
@@ -54,8 +57,27 @@ class _HomeScreenState extends State<HomeScreen> {
                             width: 100,
                             child: Image.asset('assets/${data!.icon}.png')),
                         Text('${data!.durum}'),
-                        CurrentWeather('${data!.icon}', '${data!.temp}',
-                            '${data!.cityName}'),
+                        CurrentWeather('${data!.icon}', '${data!.temp}'),
+                        DropdownButton(
+                          value: dropdownvalue,
+                            icon: Icon(Icons.keyboard_arrow_down),
+                          items: Cities.map((String items) {
+                            return DropdownMenuItem(
+                              value: items,
+                              child: Text(items,
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  color: Colors.grey.shade600,
+                                ),
+                              ),
+                            );
+                          }).toList(),
+                              onChanged: (String? newValue) {
+                                setState(() {
+                                  dropdownvalue = newValue!;
+                                });
+                              }
+                        ),
                         const SizedBox(
                           height: 50,
                         ),

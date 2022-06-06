@@ -8,7 +8,6 @@ Map<String, IconData> iconsMap = {
 Widget CurrentWeather(
   String icon,
   String temp,
-  String location,
 ) {
   return Center(
     child: Column(
@@ -26,13 +25,6 @@ Widget CurrentWeather(
         ),
         const SizedBox(
           height: 10,
-        ),
-        Text(
-          '$location',
-          style: TextStyle(
-            fontSize: 20,
-            color: Colors.grey.shade600,
-          ),
         ),
       ],
     ),
