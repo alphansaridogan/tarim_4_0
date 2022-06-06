@@ -120,5 +120,36 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
 ---
 
 # Sprint 3
+- **Sprint Notları:** User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir. 
+
+- **Sprint içinde tamamlanması tahmin edilen puan:** 80 Puan
+- **Puan tamamlama mantığı**: İlk iki sprintte pek çok taski ve user storyi tamamladığımız için bu sprintte daha çok hata ayıklamalarına ağırlık verilmiştir, o yüzden bu sprint için 80 puan hedeflenmiştir.
+- **Backlog düzeni ve Story seçimleri:** Product Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint 3 için tahmin edilen puan sayısını geçmeyecek ve hepsini tamamlayacağımız bir sistemle önceliklendirme yapılmıştır.
+
+Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
+- **Daily Scrum:** Daily Scrum toplantılarının zamansal sebeplerden ve yoğunluktan dolayı Whatsapp üzerinden yapılmasına karar verilmiştir. Buna ek olarak Google Meets üzerinden 3 günde bir olacak şekilde görüntülü toplantı yapılmıştır. Daily Scrum toplantısı meeting buluşmaları ve konuşmaları jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: [�Bootcamp Takım 35 ile WhatsApp Sohbeti.txt](https://github.com/alphansaridogan/tarim_4_0/files/8846501/Bootcamp.Takim.35.ile.WhatsApp.Sohbeti.txt)
+![meeting2 (1)](https://user-images.githubusercontent.com/76884034/172218093-af09c7a3-fe1c-46b5-a36c-a77e04680937.png)
+
+- **Sprint Board Update:** Sprint board schreenshotları 
+![backlog1](https://user-images.githubusercontent.com/76884034/172218287-6adaec1c-af95-4cf0-81be-83300bd6e460.png)
+![backlog2](https://user-images.githubusercontent.com/76884034/172218527-f4bd9baf-6e2d-4a59-840f-1b4c1767a370.png)
+![backlog3](https://user-images.githubusercontent.com/76884034/172218547-e0ad78cc-d38d-48c4-a6de-64fa89eeb406.png)
+
+- **Ürün Durumu:** Ekran görüntüleri
+![ekran1 (1)](https://user-images.githubusercontent.com/76884034/172218586-ebfbd5d5-7016-48e8-b6c4-04fa0d5b7ba8.jpeg)
+![ekran1 (2)](https://user-images.githubusercontent.com/76884034/172218715-aca66151-bd3b-4af5-93f3-11967e4dbbec.jpeg)
+![ekran1 (3)](https://user-images.githubusercontent.com/76884034/172218732-7919e9cf-dfbe-4b56-9c1d-5373728fa55b.jpeg)
+![ekran1 (4)](https://user-images.githubusercontent.com/76884034/172218738-3d260772-7ff7-42c4-b642-6c7f0fb1d431.jpeg)
+
+- **Sprint Review:** Alınan kararlar: Takımdaki bazı kişilerin görevlerini yapmamaları/geciktirmeleri sebebiyle bazı kişiler daha çok çalışmak durumunda kaldı ancak yine de hayal ettiğimiz gibi olmasa da çıkan sonuçtan memnunuz. Sprint Review katılımcıları:
+ - Esra Sude Aydemir: Scrum Master
+ - Alphan Sarıdoğan: Developer
+ - Mehmet Demir: Developer
+- **Sprint Retrospective:**
+   -  Başka bir projede birlikte olursak aynı hataların tekrarlanmaması gerektiği konuşulmuştur.
+   -  Çıkan ürün hakkında video çekecek kişi belirlenmiştir.
+   
+
+ **NOT:** Flutter 2.10.5 sürümüyle çalışılmıştır.
 
 ---
