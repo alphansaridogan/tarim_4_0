@@ -18,6 +18,7 @@ class ShopScreen extends StatelessWidget {
       viewModelBuilder: () => ShopScreenModel(),
       onModelReady: (model) => model.init(),
       builder: (context, model, child) => SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         child: SizedBox(
           height: size.height * 1,
           child: Scaffold(
@@ -73,6 +74,7 @@ class ShopScreen extends StatelessWidget {
                     height: 40,
                   ),
                   SingleChildScrollView(
+                    physics: const BouncingScrollPhysics(),
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: model.product
