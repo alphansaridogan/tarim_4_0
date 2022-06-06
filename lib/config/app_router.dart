@@ -14,7 +14,6 @@ import 'package:tarim_4_0/screens/welcome_screen/welcome_screen_model.dart';
 
 class AppRouter {
   static Route onGenerateRoute(RouteSettings settings) {
-    print('The Route is: ${settings.name}');
 
     switch (settings.name) {
       case SplashScreenModel.routeName:
