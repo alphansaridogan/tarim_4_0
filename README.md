@@ -7,10 +7,10 @@
 ## Takım Elemanları
 
 - Esra Sude Aydemir: Scrum Master
-- Melek Dursun: Product Owner
+- ~Melek Dursun: Product Owner~
 - Alphan Sarıdoğan: Developer
 - Mehmet Demir: Developer
-- Yaşar Alaca: Developer
+- ~Yaşar Alaca: Developer~
 
 ## Ürün İsmi
 
@@ -140,6 +140,9 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
 ![ekran1 (2)](https://user-images.githubusercontent.com/76884034/172218715-aca66151-bd3b-4af5-93f3-11967e4dbbec.jpeg)
 ![ekran1 (3)](https://user-images.githubusercontent.com/76884034/172218732-7919e9cf-dfbe-4b56-9c1d-5373728fa55b.jpeg)
 ![ekran1 (4)](https://user-images.githubusercontent.com/76884034/172218738-3d260772-7ff7-42c4-b642-6c7f0fb1d431.jpeg)
+![ekran 4](https://user-images.githubusercontent.com/76884034/172234628-9d3cdcb6-1e18-449c-b97e-cdd7126e08e0.jpeg)
+![ekran5](https://user-images.githubusercontent.com/76884034/172234663-0ca79a86-ef2f-42e2-8955-855e08a7ce4f.jpeg)
+![ekran 6](https://user-images.githubusercontent.com/76884034/172234851-d8cddaa3-99fd-4143-aba9-2a3917257e99.jpeg)
 
 - **Sprint Review:** Alınan kararlar: Takımdaki bazı kişilerin görevlerini yapmamaları/geciktirmeleri sebebiyle bazı kişiler daha çok çalışmak durumunda kaldı ancak yine de hayal ettiğimiz gibi olmasa da çıkan sonuçtan memnunuz. Sprint Review katılımcıları:
  - Esra Sude Aydemir: Scrum Master
