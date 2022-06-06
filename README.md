@@ -70,10 +70,8 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
 
 - **Sprint Review:** Alınan kararlar: Front-End kısımları tamamlayıp Back-end kısımlara öncelik vermemiz gerektiği kararlaştırılmıştır. Veri tabanı oluşturması e mail ve bilgi çekimi için gerekli görülmüştür bu sebeple bu konu hakkında bir backlog oluşturulmasına karar verilmiştir. Çıkan üründe bir sorun görülmemiştir. Ekstra durumlar değerlendirilmiştir. Sprint Review katılımcıları:
  - Esra Sude Aydemir: Scrum Master
- - Melek Dursun: Product Owner
  - Alphan Sarıdoğan: Developer
  - Mehmet Demir: Developer
- - Yaşar Alaca: Developer
 - **Sprint Retrospective:**
    -  Takım içi görev değişikliğine gidilmiştir.
    -  Meetinglerin daha sık yapılmasına karar verilmiştir.
@@ -108,10 +106,8 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
 
 - **Sprint Review:** Alınan kararlar: Front-end kısımların birçoğu tamamlandığı için Back-end kısımlarında daha yavaş ve kontrollü çalışabileceğimiz konuşulmuştur. Bu sebeple ürünün çalışılabilirliğini kontrol etmek için daha fazla test yapmaya karar verilmiştir. Sprint Review katılımcıları:
  - Esra Sude Aydemir: Scrum Master
- - Melek Dursun: Product Owner
  - Alphan Sarıdoğan: Developer
  - Mehmet Demir: Developer
- - Yaşar Alaca: Developer
 - **Sprint Retrospective:**
    -  Ürün teslim tarihine az kaldığı için önceliklendirmelerin değiştirilmesine karar verilmiştir.
    -  Meetinglerin daha sık yapılmasına karar verilmiştir.
