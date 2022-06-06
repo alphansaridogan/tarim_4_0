@@ -1,46 +1,40 @@
-
-
 import 'package:flutter/material.dart';
 
 Map<String, IconData> iconsMap = {
-  '01d': Icons.wb_sunny_rounded ,
+  '01d': Icons.wb_sunny_rounded,
   '01n': Icons.calendar_view_day_rounded,
 };
 
-
 Widget CurrentWeather(
-    String icon,
-    String temp,
-    String location,
-
-
-    )
-{
+  String icon,
+  String temp,
+  String location,
+) {
   return Center(
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
-        Text('$temp C°',
-        style: TextStyle(
-          fontSize: 46,
+        Text(
+          '$temp C°',
+          style: const TextStyle(
+            fontSize: 46,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
-        Text('$location',
-        style: TextStyle(
-          fontSize: 20,
-          color: Colors.grey.shade600,
+        Text(
+          '$location',
+          style: TextStyle(
+            fontSize: 20,
+            color: Colors.grey.shade600,
           ),
         ),
       ],
     ),
   );
-
 }
-

@@ -35,11 +35,10 @@ class SuggestionsScreenModel extends MainViewModel {
           'https://fidansepetim.com/uploads/p/p/3-Yas-Asili-Granny-Smith-Elma-Fidani-Yesil-Mayhos_1.jpg',
       'description1':
           'Elma: Hava sıcaklıklarına bağlı olarak bu haftatoprak nemini %35 civarında tutulması önerilir.Küllenme hastalığı riskini önlemek için 15 günde bir sıvı kükürt ile ilaçlama yapılmalıdır. İstenmeyen sürgünler budanmalı ana omcanın hava alması sağlanmalıdır.',
-      'description2':
-          'Elmaaa: Hava sıcaklıklarına bağlı olarak bu haftatoprak nemini %45 civarında tutulması önerilir.Küllenme hastalığı riskini önlemek için 15 günde bir sıvı kükürt ile ilaçlama yapılmalıdır. İstenmeyen sürgünler budanmalı ana omcanın hava alması sağlanmalıdır.',
+      'description2': '',
       'moisture': '%25-50',
       'heat': '8-30C',
-      'microorganism': 'Elma kurdu :)',
+      'microorganism': 'Elma kurdu',
     }
   ];
 

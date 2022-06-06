@@ -25,63 +25,66 @@ class SuggestionsScreen extends StatelessWidget {
                   bottomLeft: Radius.circular(150),
                 ),
               ),
-              child: Column(
-                children: [
-                  const SizedBox(
-                    height: 75,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      SizedBox(
-                        width: size.width * 0.45,
-                        child: model.product != null
-                            ? Image.network(
-                                model.productDetail[
-                                        model.productAssignment(model.product)]
-                                    ['urlImage'],
-                              )
-                            : const SizedBox(),
-                      ),
-                      DropDownWidget(
-                          borderColor: Constants.white,
-                          value: model.product,
-                          width: 0.5,
-                          textStyle:
-                              Constants.headline1.apply(color: Constants.black),
-                          list: model.products,
-                          title: 'Ürün Seçiniz',
-                          onChanged: model.setProduct,
-                          size: size)
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  model.product != null
-                      ? Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                          child: Center(
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    const SizedBox(
+                      height: 75,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          width: size.width * 0.45,
+                          child: model.product != null
+                              ? Image.network(
+                                  model.productDetail[model.productAssignment(
+                                      model.product)]['urlImage'],
+                                )
+                              : const SizedBox(),
+                        ),
+                        DropDownWidget(
+                            borderColor: Constants.white,
+                            value: model.product,
+                            width: 0.5,
+                            textStyle: Constants.headline1
+                                .apply(color: Constants.black),
+                            list: model.products,
+                            title: 'Ürün Seçiniz',
+                            onChanged: model.setProduct,
+                            size: size)
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    model.product != null
+                        ? Padding(
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 10.0),
+                            child: Center(
+                              child: (Text(
+                                '- ${model.productDetail[model.productAssignment(model.product)]['description1']}',
+                                style: Constants.subtitle1,
+                              )),
+                            ),
+                          )
+                        : const SizedBox(),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    model.product != null
+                        ? Padding(
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 10.0),
                             child: (Text(
-                              '- ${model.productDetail[model.productAssignment(model.product)]['description1']}',
+                              '- ${model.productDetail[model.productAssignment(model.product)]['description2']}',
                               style: Constants.subtitle1,
                             )),
-                          ),
-                        )
-                      : const SizedBox(),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  model.product != null
-                      ? Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                          child: (Text(
-                            '- ${model.productDetail[model.productAssignment(model.product)]['description2']}',
-                            style: Constants.subtitle1,
-                          )),
-                        )
-                      : const SizedBox(),
-                ],
+                          )
+                        : const SizedBox(),
+                  ],
+                ),
               ),
             ),
             const SizedBox(
